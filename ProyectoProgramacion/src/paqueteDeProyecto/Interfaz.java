@@ -11,6 +11,7 @@ public class Interfaz {
 		JOptionPane.showMessageDialog(null, "Hola Prueba de Github 08/05/2021");
 		
 		JOptionPane.showInputDialog(null, "Prueba 2 Github");
+		JOptionPane.showInputDialog(null, "Prueba 3 Github Vanessa");
 		
 	
 		
