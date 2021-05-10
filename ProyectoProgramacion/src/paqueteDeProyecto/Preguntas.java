@@ -17,13 +17,13 @@ public class Preguntas {
 	String PreguntasG[][] = new String[20][5];
 	String PreguntasC[] = new String[5];
 
-	int RespuestasH[] = new int[5]; // Arreglos de 5 espacios para las respuestas del usuario
-	int RespuestasG[] = new int[5];
-	int RespuestasC[] = new int[5];
+	int RespuestasH[] = new int[20]; // Arreglos de 5 espacios para las respuestas del usuario
+	int RespuestasG[] = new int[20];
+	int RespuestasC[] = new int[20];
 
-	int ResCorrectasH[] = new int[5]; // Arreglos de 5 espacios para respuestas correctas
-	int ResCorrectasG[] = new int[5];
-	int ResCorrectasC[] = new int[5];
+	int ResCorrectasH[] = new int[20]; // Arreglos de 5 espacios para respuestas correctas
+	int ResCorrectasG[] = new int[20];
+	int ResCorrectasC[] = new int[20];
 	
 
 	int res = 0;
