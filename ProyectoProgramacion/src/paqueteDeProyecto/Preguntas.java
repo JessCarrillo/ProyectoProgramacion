@@ -142,13 +142,13 @@ public class Preguntas {
 
 	public void desplegarPreguntasHistoria() {
 
-		int PreguntaRealizada[] = new int[5]; //Cambiar despues a int[PreguntasH.lenght]
+		int PreguntaRealizada[] = new int[5]; //Cambiar despues a int[PreguntasH.lenght] //PreguntaRealizada hasta 10
 		int cont = 0;
 		encontrado = false;
 		
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 5; i++) { //Ciclo hasta 10 
 			
-			int Random = (int) Math.floor(Math.random() * 5);
+			int Random = (int) Math.floor(Math.random() * 5); //Random hasta 20
 			
 			if(i==0) {
 				PreguntaRealizada[cont] = Random;
@@ -179,7 +179,6 @@ public class Preguntas {
 							PreguntasH[Random][1]);
 				}
 			}
-			
 			cont++;
 		}
 
