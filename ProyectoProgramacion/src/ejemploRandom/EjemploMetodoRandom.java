@@ -9,7 +9,7 @@ public class EjemploMetodoRandom {
 
 		String[] Nombres = new String[] { "Juan,", "Valeria", "Jesus", "Manuel", "Raul" };
 
-		int Random = (int) Math.floor(Math.random() * 6);
+		int Random = (int) Math.floor(Math.random() * 5);
 
 		System.out.println(Random);
 
