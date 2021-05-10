@@ -88,10 +88,24 @@ public class Preguntas {
 		PreguntasH[1][4] = "13";
 		
 		//Respuestas de Pregunta 3
-		PreguntasH[1][1] = "10";
-		PreguntasH[1][2] = "12";
-		PreguntasH[1][3] = "11";
-		PreguntasH[1][4] = "13";
+		PreguntasH[2][1] = "Porfirio Diaz";
+		PreguntasH[2][2] = "Guadalupe Victoria";
+		PreguntasH[2][3] = "Ignacio Allende";
+		PreguntasH[2][4] = "Agustín de Iturbide";
+		
+		//Respuestas de Pregunta 4
+		PreguntasH[3][1] = "5/05/1862";
+		PreguntasH[3][2] = "5/05/1962";
+		PreguntasH[3][3] = "5/05/1866";
+		PreguntasH[3][4] = "5/05/1966";
+		
+		//Respuestas de Pregunta 5
+		PreguntasH[3][1] = "México Querido";
+		PreguntasH[3][2] = "Républica";
+		PreguntasH[3][3] = "México";
+		PreguntasH[3][4] = "Distrito Federal";
+		
+		//
 		
 	}
 	
@@ -125,6 +139,12 @@ public class Preguntas {
 	}
 	
 	public void desplegarPreguntasHistoria() { 
+		
+		for(int i=0; i<5; i++) {
+			RespuestasH[0] = JOptionPane.showOptionDialog(null, "Selecciona el año en que inicio la guerra de independencia de Mexico",
+					"Preguntas de Historia", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, new ImageIcon(""),
+					new Object[] { "1810", "1821", "1921", "1841" }, "1821"); //Respuesta correcta 1810, 0
+		}
 			
 		RespuestasH[0] = JOptionPane.showOptionDialog(null, "Selecciona el año en que inicio la guerra de independencia de Mexico",
 				"Preguntas de Historia", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, new ImageIcon(""),
