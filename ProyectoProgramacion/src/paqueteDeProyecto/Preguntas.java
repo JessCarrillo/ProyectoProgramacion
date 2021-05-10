@@ -24,6 +24,7 @@ public class Preguntas {
 	int ResCorrectasH[] = new int[5]; // Arreglos de 5 espacios para respuestas correctas
 	int ResCorrectasG[] = new int[5];
 	int ResCorrectasC[] = new int[5];
+	
 
 	int res = 0;
 	int contAcertadas = 0;
