@@ -13,8 +13,8 @@ import javax.swing.JOptionPane;
 public class Preguntas {
 	
 	//Declaración e Inicialización de Variables Globales
-	String PreguntasH[] = new String[5];
-	String PreguntasG[] = new String[5];
+	String PreguntasH[][] = new String[20][5];
+	String PreguntasG[][] = new String[20][5];
 	String PreguntasC[] = new String[5];
 	
 	int RespuestasH[] = new int[5]; //Arreglos de 5 espacios para las respuestas del usuario
@@ -36,17 +36,14 @@ public class Preguntas {
 		
 		//Arreglos con preguntas para desplegarlas proximamente en ciclo for
 		
-		PreguntasH[0] = "Selecciona el año en que inicio la guerra de independencia de Mexico";
-		PreguntasH[1] = "¿Cuantos año duro la guerra de independencia de Mexico?";
-		PreguntasH[2] = "¿Quien fue el primer presidente de Mexico?";
-		PreguntasH[3] = "¿Cuando fue la batalla de Puebla?";
-		PreguntasH[4] = "¿Como se conocia anteriormente a la actual Ciudad de Mexico?";
+		añadirPreguntasyResHistoria();
+		añadirPreguntasyResGeografia();
 		
-		PreguntasG[0] = "¿Cuál es el país más grande del mundo?";
-		PreguntasG[1] = "¿Cuántos países hay en el mundo?";
-		PreguntasG[2] = "¿Cuál es la ciudad más poblada del mundo?";
-		PreguntasG[3] = "¿Cuál es el rio más largo del mundo?";
-		PreguntasG[4] = "¿Qué país es el segundo más grande del mundo en términos de población?";
+		PreguntasG[0][0] = "¿Cuál es el país más grande del mundo?";
+		PreguntasG[0][1] = "¿Cuántos países hay en el mundo?";
+		PreguntasG[0][2] = "¿Cuál es la ciudad más poblada del mundo?";
+		PreguntasG[0][3] = "¿Cuál es el rio más largo del mundo?";
+		PreguntasG[0][4] = "¿Qué país es el segundo más grande del mundo en términos de población?";
 		
 		PreguntasC[0] = "¿Película que casi le da un infarto a su director Brad Bierd?";
 		PreguntasC[1] = "¿Palabra más conocida del Capitán América de Los Vengadores?";
@@ -75,6 +72,63 @@ public class Preguntas {
 		
 	}
 	
+	public void añadirPreguntasyResHistoria() {
+		
+		//Preguntas
+		PreguntasH[0][0] = "Selecciona el año en que inicio la guerra de independencia de Mexico";
+		PreguntasH[1][0] = "¿Cuantos año duro la guerra de independencia de Mexico?";
+		PreguntasH[2][0] = "¿Quien fue el primer presidente de Mexico?";
+		PreguntasH[3][0] = "¿Cuando fue la batalla de Puebla?";
+		PreguntasH[4][0] = "¿Como se conocia anteriormente a la actual Ciudad de Mexico?";
+		
+		//Respuestas de Pregunta 1
+		PreguntasH[0][1] = "1810";
+		PreguntasH[0][2] = "1821";
+		PreguntasH[0][3] = "1921";
+		PreguntasH[0][4] = "1841";
+		
+		//Respuestas de Pregunta 2
+		PreguntasH[1][1] = "10";
+		PreguntasH[1][2] = "12";
+		PreguntasH[1][3] = "11";
+		PreguntasH[1][4] = "13";
+		
+		//Respuestas de Pregunta 3
+		PreguntasH[1][1] = "10";
+		PreguntasH[1][2] = "12";
+		PreguntasH[1][3] = "11";
+		PreguntasH[1][4] = "13";
+		
+	}
+	
+	public void añadirPreguntasyResGeografia() {
+		
+		//Preguntas
+		PreguntasH[0][0] = "Selecciona el año en que inicio la guerra de independencia de Mexico";
+		PreguntasH[1][0] = "¿Cuantos año duro la guerra de independencia de Mexico?";
+		PreguntasH[2][0] = "¿Quien fue el primer presidente de Mexico?";
+		PreguntasH[3][0] = "¿Cuando fue la batalla de Puebla?";
+		PreguntasH[4][0] = "¿Como se conocia anteriormente a la actual Ciudad de Mexico?";
+		
+		//Respuestas de Pregunta 1
+		PreguntasH[0][1] = "1810";
+		PreguntasH[0][2] = "1821";
+		PreguntasH[0][3] = "1921";
+		PreguntasH[0][4] = "1841";
+		
+		//Respuestas de Pregunta 2
+		PreguntasH[1][1] = "10";
+		PreguntasH[1][2] = "12";
+		PreguntasH[1][3] = "11";
+		PreguntasH[1][4] = "13";
+		
+		//Respuestas de Pregunta 3
+		PreguntasH[1][1] = "10";
+		PreguntasH[1][2] = "12";
+		PreguntasH[1][3] = "11";
+		PreguntasH[1][4] = "13";
+		
+	}
 	
 	public void desplegarPreguntasHistoria() { 
 			
