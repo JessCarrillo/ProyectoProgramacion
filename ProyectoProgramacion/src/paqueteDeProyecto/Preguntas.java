@@ -97,7 +97,7 @@ public class Preguntas {
 	
 	public void añadirPreguntasyResGeografia() {
 		
-		//Preguntas
+		//Preguntas Geografia
 		PreguntasG[0][0] = "¿Cuál es el país más grande del mundo?";
 		PreguntasG[0][1] = "¿Cuántos países hay en el mundo?";
 		PreguntasG[0][2] = "¿Cuál es la ciudad más poblada del mundo?";
