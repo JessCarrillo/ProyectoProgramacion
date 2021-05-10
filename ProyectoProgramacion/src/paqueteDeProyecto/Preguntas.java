@@ -31,6 +31,7 @@ public class Preguntas {
 	String tituloDR = "";
 
 	String nombre = "";
+	boolean encontrado;
 
 	public void añadirPreguntasYRespuestas() {
 
@@ -141,11 +142,45 @@ public class Preguntas {
 
 	public void desplegarPreguntasHistoria() {
 
+		int PreguntaRealizada[] = new int[5]; //Cambiar despues a int[PreguntasH.lenght]
+		int cont = 0;
+		encontrado = false;
+		
 		for (int i = 0; i < 5; i++) {
-			RespuestasH[i] = JOptionPane.showOptionDialog(null, PreguntasH[i][0], "Preguntas de Historia",
-					JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, new ImageIcon(""),
-					new Object[] { PreguntasH[i][1], PreguntasH[i][2], PreguntasH[i][3], PreguntasH[i][4] },
-					PreguntasH[i][1]);
+			
+			int Random = (int) Math.floor(Math.random() * 5);
+			
+			if(i==0) {
+				PreguntaRealizada[cont] = Random;
+				RespuestasH[Random] = JOptionPane.showOptionDialog(null, PreguntasH[Random][0], "Preguntas de Historia",
+						JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
+						new ImageIcon("src/paqueteDeProyecto/imagenes/Historia" + i +".png"),
+						new Object[] { PreguntasH[Random][1], PreguntasH[Random][2], PreguntasH[Random][3], PreguntasH[Random][4]},
+						PreguntasH[Random][1]);
+			}
+			else {
+				for(int j=0; j<cont; j++) {
+					if(PreguntaRealizada[j]==Random) {
+						encontrado = true;
+						break;
+					} 
+				}
+				
+				if(encontrado) {
+					i--;
+					cont--;
+					encontrado = false;
+				}else {
+					PreguntaRealizada[cont] = Random;
+					RespuestasH[Random] = JOptionPane.showOptionDialog(null, PreguntasH[Random][0], "Preguntas de Historia",
+							JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
+							new ImageIcon("src/paqueteDeProyecto/imagenes/Historia" + i +".png"),
+							new Object[] { PreguntasH[Random][1], PreguntasH[Random][2], PreguntasH[Random][3], PreguntasH[Random][4]},
+							PreguntasH[Random][1]);
+				}
+			}
+			
+			cont++;
 		}
 
 	}
