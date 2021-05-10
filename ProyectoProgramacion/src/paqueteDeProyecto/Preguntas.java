@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 public class Preguntas {
 
-	// Declaración e Inicialización de Variables Globales
+	// DeclaraciÃ³n e InicializaciÃ³n de Variables Globales
 	String PreguntasH[][] = new String[20][5];
 	String PreguntasG[][] = new String[20][5];
 	String PreguntasC[] = new String[5];
@@ -33,20 +33,20 @@ public class Preguntas {
 	String nombre = "";
 	boolean encontrado;
 
-	public void añadirPreguntasYRespuestas() {
+	public void aÃ±adirPreguntasYRespuestas() {
 
 		// Arreglos con preguntas para desplegarlas proximamente en ciclo for
 
-		añadirPreguntasyResHistoria();
-		añadirPreguntasyResGeografia();
+		aÃ±adirPreguntasyResHistoria();
+		aÃ±adirPreguntasyResGeografia();
 
-		PreguntasC[0] = "¿Película que casi le da un infarto a su director Brad Bierd?";
-		PreguntasC[1] = "¿Palabra más conocida del Capitán América de Los Vengadores?";
-		PreguntasC[2] = "¿Cuál era la película con mas taquilla antes de ser Los Vengadores ENDGAME?";
-		PreguntasC[3] = "Película de Disney que tuvo un uso del 2D y 3D en toda la película: ";
-		PreguntasC[4] = "Película de DC que se volvió a estrenar en el año 2021: ";
+		PreguntasC[0] = "Â¿PelÃ­cula que casi le da un infarto a su director Brad Bierd?";
+		PreguntasC[1] = "Â¿Palabra mÃ¡s conocida del CapitÃ¡n AmÃ©rica de Los Vengadores?";
+		PreguntasC[2] = "Â¿CuÃ¡l era la pelÃ­cula con mas taquilla antes de ser Los Vengadores ENDGAME?";
+		PreguntasC[3] = "PelÃ­cula de Disney que tuvo un uso del 2D y 3D en toda la pelÃ­cula: ";
+		PreguntasC[4] = "PelÃ­cula de DC que se volviÃ³ a estrenar en el aÃ±o 2021: ";
 
-		// Arrelos con respuestas correctas según indice regresado en la variable res de
+		// Arrelos con respuestas correctas segÃºn indice regresado en la variable res de
 		// los botones
 		ResCorrectasH[0] = 0;
 		ResCorrectasH[1] = 2;
@@ -68,16 +68,17 @@ public class Preguntas {
 
 	}
 
-	public void añadirPreguntasyResHistoria() {
+
+	public void aÃ±adirPreguntasyResHistoria() {
 
 		// Preguntas
-		PreguntasH[0][0] = "Selecciona el año en que inicio la guerra de independencia de Mexico";
-		PreguntasH[1][0] = "¿Cuantos año duro la guerra de independencia de Mexico?";
-		PreguntasH[2][0] = "¿Quien fue el primer presidente de Mexico?";
-		PreguntasH[3][0] = "¿Cuando fue la batalla de Puebla?";
-		PreguntasH[4][0] = "¿Como se conocia anteriormente a la actual Ciudad de Mexico?";
+		PreguntasH[0][0] = "Selecciona el aÃ±o en que inicio la guerra de independencia de Mexico";
+		PreguntasH[1][0] = "Â¿Cuantos aÃ±o duro la guerra de independencia de Mexico?";
+		PreguntasH[2][0] = "Â¿Quien fue el primer presidente de Mexico?";
+		PreguntasH[3][0] = "Â¿Cuando fue la batalla de Puebla?";
+		PreguntasH[4][0] = "Â¿Como se conocia anteriormente a la actual Ciudad de Mexico?";
 		PreguntasH[5][0] = "Selecciona: la Deidad del Mexico antiguo conocido como \"La Serpiente Emplumada\"";
-		PreguntasH[6][0] = "Selecciona: El mineral que más se extraía en la Nueva España era:";
+		PreguntasH[6][0] = "Selecciona: El mineral que mÃ¡s se extraÃ­a en la Nueva EspaÃ±a era:";
 		PreguntasH[7][0] = "Selecciona: La Guerra de Reforma fue entre:";
 		PreguntasH[8][0] = "";
 		PreguntasH[9][0] = "";
@@ -108,7 +109,7 @@ public class Preguntas {
 		PreguntasH[2][1] = "Porfirio Diaz";
 		PreguntasH[2][2] = "Guadalupe Victoria"; //Res Correcta
 		PreguntasH[2][3] = "Ignacio Allende";
-		PreguntasH[2][4] = "Agustín de Iturbide";
+		PreguntasH[2][4] = "AgustÃ­n de Iturbide";
 
 		// Respuestas de Pregunta 4
 		PreguntasH[3][1] = "5/05/1862"; //Res Correcta
@@ -117,15 +118,15 @@ public class Preguntas {
 		PreguntasH[3][4] = "5/05/1966";
 
 		// Respuestas de Pregunta 5
-		PreguntasH[4][1] = "México Querido";
-		PreguntasH[4][2] = "Républica";
-		PreguntasH[4][3] = "México";
+		PreguntasH[4][1] = "MÃ©xico Querido";
+		PreguntasH[4][2] = "RÃ©publica";
+		PreguntasH[4][3] = "MÃ©xico";
 		PreguntasH[4][4] = "Distrito Federal"; //Res Correcta
 		
 		//Respuestas de Pregunta 6
 		PreguntasH [5][1] = "Ometecuhtli"; 
 		PreguntasH [5][2] = "Huitzilopochtli";
-		PreguntasH [5][3] = "Quetzalcóatl"; //Res Correcta
+		PreguntasH [5][3] = "QuetzalcÃ³atl"; //Res Correcta
 		PreguntasH [5][4] = "Ostoyollotzin";
 		
 		//Respuestas de Pregunta 7
@@ -137,7 +138,7 @@ public class Preguntas {
 		//Respuestas de Pregunta 7
 		PreguntasH [7][1] = "Republicanos e indigenas";
 		PreguntasH [7][2] = "Liberales y Conservadores"; //Res Correcta;
-		PreguntasH [7][3] = "Españoles y Mexicanos";
+		PreguntasH [7][3] = "EspaÃ±oles y Mexicanos";
 		PreguntasH [7][4] = "PRI vs PAN";
 		
 		//Respuestas de Pregunta 8
@@ -220,14 +221,86 @@ public class Preguntas {
 
 	}
 
-	public void añadirPreguntasyResGeografia() {
+	public void aÃ±adirPreguntasyResGeografia() {
 
 		// Preguntas Geografia
-		PreguntasG[0][0] = "¿Cuál es el país más grande del mundo?";
-		PreguntasG[0][1] = "¿Cuántos países hay en el mundo?";
-		PreguntasG[0][2] = "¿Cuál es la ciudad más poblada del mundo?";
-		PreguntasG[0][3] = "¿Cuál es el rio más largo del mundo?";
-		PreguntasG[0][4] = "¿Qué país es el segundo más grande del mundo en términos de población?";
+		PreguntasG[0][0] = "Â¿CuÃ¡l es el paÃ­s mÃ¡s grande del mundo?";
+		PreguntasG[0][1] = "Â¿CuÃ¡ntos paÃ­ses hay en el mundo?";
+		PreguntasG[0][2] = "Â¿CuÃ¡l es la ciudad mÃ¡s poblada del mundo?";
+		PreguntasG[0][3] = "Â¿CuÃ¡l es el rio mÃ¡s largo del mundo?";
+		PreguntasG[0][4] = "Â¿QuÃ© paÃ­s es el segundo mÃ¡s grande del mundo en tÃ©rminos de poblaciÃ³n?";
+
+		// Respuestas de Pregunta 1
+		PreguntasH[0][1] = "1810";
+		PreguntasH[0][2] = "1821";
+		PreguntasH[0][3] = "1921";
+		PreguntasH[0][4] = "1841";
+
+		// Respuestas de Pregunta 2
+		PreguntasH[1][1] = "10";
+		PreguntasH[1][2] = "12";
+		PreguntasH[1][3] = "11";
+		PreguntasH[1][4] = "13";
+
+		// Respuestas de Pregunta 3
+		PreguntasH[1][1] = "10";
+		PreguntasH[1][2] = "12";
+		PreguntasH[1][3] = "11";
+		PreguntasH[1][4] = "13";
+
+	}
+
+	public void aÃ±adirPreguntasyResHistoria() {
+
+		// Preguntas
+		PreguntasH[0][0] = "Selecciona el aÃ±o en que inicio la guerra de independencia de Mexico";
+		PreguntasH[1][0] = "Â¿Cuantos aÃ±o duro la guerra de independencia de Mexico?";
+		PreguntasH[2][0] = "Â¿Quien fue el primer presidente de Mexico?";
+		PreguntasH[3][0] = "Â¿Cuando fue la batalla de Puebla?";
+		PreguntasH[4][0] = "Â¿Como se conocia anteriormente a la actual Ciudad de Mexico?";
+
+		// Respuestas de Pregunta 1
+		PreguntasH[0][1] = "1810";
+		PreguntasH[0][2] = "1821";
+		PreguntasH[0][3] = "1921";
+		PreguntasH[0][4] = "1841";
+
+		// Respuestas de Pregunta 2
+		PreguntasH[1][1] = "10";
+		PreguntasH[1][2] = "12";
+		PreguntasH[1][3] = "11";
+		PreguntasH[1][4] = "13";
+
+		// Respuestas de Pregunta 3
+		PreguntasH[2][1] = "Porfirio Diaz";
+		PreguntasH[2][2] = "Guadalupe Victoria";
+		PreguntasH[2][3] = "Ignacio Allende";
+		PreguntasH[2][4] = "AgustÃ­n de Iturbide";
+
+		// Respuestas de Pregunta 4
+		PreguntasH[3][1] = "5/05/1862";
+		PreguntasH[3][2] = "5/05/1962";
+		PreguntasH[3][3] = "5/05/1866";
+		PreguntasH[3][4] = "5/05/1966";
+
+		// Respuestas de Pregunta 5
+		PreguntasH[4][1] = "MÃ©xico Querido";
+		PreguntasH[4][2] = "RÃ©publica";
+		PreguntasH[4][3] = "MÃ©xico";
+		PreguntasH[4][4] = "Distrito Federal";
+
+		//
+
+	}
+
+	public void aÃ±adirPreguntasyResGeografia() {
+
+		// Preguntas Geografia
+		PreguntasG[0][0] = "Â¿CuÃ¡l es el paÃ­s mÃ¡s grande del mundo?";
+		PreguntasG[0][1] = "Â¿CuÃ¡ntos paÃ­ses hay en el mundo?";
+		PreguntasG[0][2] = "Â¿CuÃ¡l es la ciudad mÃ¡s poblada del mundo?";
+		PreguntasG[0][3] = "Â¿CuÃ¡l es el rio mÃ¡s largo del mundo?";
+		PreguntasG[0][4] = "Â¿QuÃ© paÃ­s es el segundo mÃ¡s grande del mundo en tÃ©rminos de poblaciÃ³n?";
 
 		// Respuestas de Pregunta 1
 		PreguntasH[0][1] = "1810";
@@ -253,7 +326,8 @@ public class Preguntas {
 
 		int PreguntaRealizada[] = new int[5]; //Cambiar despues a int[PreguntasH.lenght]
 		int cont = 0;
-	    encontrado = false;
+  
+		encontrado = false;
 		
 		for (int i = 0; i < 5; i++) {
 			
@@ -297,31 +371,31 @@ public class Preguntas {
 	public void desplegarPreguntasGeografia() {
 
 		// res = Integer.parseInt(JOptionPane.showInputDialog(null, PreguntasG[cont],
-		// "Pregunta de Geografía " + (cont+1),JOptionPane.PLAIN_MESSAGE)); //Obtener
+		// "Pregunta de GeografÃ­a " + (cont+1),JOptionPane.PLAIN_MESSAGE)); //Obtener
 		// respuesta de usuario
-		RespuestasG[0] = JOptionPane.showOptionDialog(null, "¿Cuál es el país más grande del mundo?",
-				"Preguntas de Geografía", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
+		RespuestasG[0] = JOptionPane.showOptionDialog(null, "Â¿CuÃ¡l es el paÃ­s mÃ¡s grande del mundo?",
+				"Preguntas de GeografÃ­a", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
 				new ImageIcon("src/principal/imagenes/Geografia1.png"),
-				new Object[] { "E.U.A", "México", "Rusia", "Brasil" }, "E.U.A"); // Respuesta correcta Rusia, 2
+				new Object[] { "E.U.A", "MÃ©xico", "Rusia", "Brasil" }, "E.U.A"); // Respuesta correcta Rusia, 2
 
-		RespuestasG[1] = JOptionPane.showOptionDialog(null, "¿Cuántos países hay en el mundo?",
-				"Preguntas de Geografía", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
+		RespuestasG[1] = JOptionPane.showOptionDialog(null, "Â¿CuÃ¡ntos paÃ­ses hay en el mundo?",
+				"Preguntas de GeografÃ­a", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
 				new ImageIcon("src/principal/imagenes/Geografia2.png"), new Object[] { "200", "195", "179", "198" },
 				"200"); // Respuesta correcta 195, 1
 
-		RespuestasG[2] = JOptionPane.showOptionDialog(null, "¿Cuál es la ciudad más poblada del mundo?",
-				"Preguntas de Geografía", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
+		RespuestasG[2] = JOptionPane.showOptionDialog(null, "Â¿CuÃ¡l es la ciudad mÃ¡s poblada del mundo?",
+				"Preguntas de GeografÃ­a", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
 				new ImageIcon("src/principal/imagenes/Geografia3.png"),
-				new Object[] { "Japón", "Francia", "España", "Alemania" }, "Japón"); // Respuesta correcta Japón, 0
+				new Object[] { "JapÃ³n", "Francia", "EspaÃ±a", "Alemania" }, "JapÃ³n"); // Respuesta correcta JapÃ³n, 0
 
-		RespuestasG[3] = JOptionPane.showOptionDialog(null, "¿Cuál es el río más largo del mundo?",
-				"Preguntas de Geografía", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
+		RespuestasG[3] = JOptionPane.showOptionDialog(null, "Â¿CuÃ¡l es el rÃ­o mÃ¡s largo del mundo?",
+				"Preguntas de GeografÃ­a", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
 				new ImageIcon("src/principal/imagenes/Geografia4.png"),
-				new Object[] { "Río Bravo", "Río Volga", "Río Balsas", "Río Nilo" }, "Río Nilo"); // Respuesta correcta
-																									// Río Nilo, 3
+				new Object[] { "RÃ­o Bravo", "RÃ­o Volga", "RÃ­o Balsas", "RÃ­o Nilo" }, "RÃ­o Nilo"); // Respuesta correcta
+																									// RÃ­o Nilo, 3
 
 		RespuestasG[4] = JOptionPane.showOptionDialog(null,
-				"¿Qué país es el segundo más grande del mundo \nen términos de población?", "Preguntas de Geografía",
+				"Â¿QuÃ© paÃ­s es el segundo mÃ¡s grande del mundo \nen tÃ©rminos de poblaciÃ³n?", "Preguntas de GeografÃ­a",
 				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
 				new ImageIcon("src/principal/imagenes/Geografia5.png"),
 				new Object[] { "China", "Rusia", "India", "Indonesia" }, "China"); // Respuesta correcta India, 2
@@ -331,21 +405,21 @@ public class Preguntas {
 	public void desplegarPreguntasCine() {
 
 		RespuestasC[0] = JOptionPane.showOptionDialog(null,
-				"¿Película que casi le da un infarto a su director Brad Bierd?", "Preguntas de Cine",
+				"Â¿PelÃ­cula que casi le da un infarto a su director Brad Bierd?", "Preguntas de Cine",
 				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
 				new ImageIcon("src/principal/imagenes/Cine1.png"),
-				new Object[] { "El gigante de Acero", "Los increíbles", "Ratatoille", "Los Increíbles 2" },
+				new Object[] { "El gigante de Acero", "Los increÃ­bles", "Ratatoille", "Los IncreÃ­bles 2" },
 				"El gigante de Acero"); // Correcta respuesta El gigante de Acero 0
 
 		RespuestasC[1] = JOptionPane.showOptionDialog(null,
-				"¿Palabra más conocida del Capitán América de Los Vengadores?", "Preguntas de Cine",
+				"Â¿Palabra mÃ¡s conocida del CapitÃ¡n AmÃ©rica de Los Vengadores?", "Preguntas de Cine",
 				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
-				new ImageIcon("src/principal/imagenes/Cine2.png"), new Object[] { "Si entendí la referencia",
-						"¿alguien quiere retirarse?", "Vengadores! Unidos!", "Puedo hacer esto todo el día" },
-				"Si entendí la referencia"); // Respuesta correcta Vengadores Unidos!, 2
+				new ImageIcon("src/principal/imagenes/Cine2.png"), new Object[] { "Si entendÃ­ la referencia",
+						"Â¿alguien quiere retirarse?", "Vengadores! Unidos!", "Puedo hacer esto todo el dÃ­a" },
+				"Si entendÃ­ la referencia"); // Respuesta correcta Vengadores Unidos!, 2
 
 		RespuestasC[2] = JOptionPane.showOptionDialog(null,
-				"¿Cuál era la película con mas taquilla antes de ser Los Vengadores ENDGAME?", "Preguntas de Cine",
+				"Â¿CuÃ¡l era la pelÃ­cula con mas taquilla antes de ser Los Vengadores ENDGAME?", "Preguntas de Cine",
 				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
 				new ImageIcon("src/principal/imagenes/Cine3.png"),
 				new Object[] { "Avatar", "La cenicienta", "Ready player one", "Juego de tronos" }, "Avatar"); // Respuesta
@@ -354,7 +428,7 @@ public class Preguntas {
 																												// 0
 
 		RespuestasC[3] = JOptionPane.showOptionDialog(null,
-				"Película de Disney que tuvo un uso del 2D y 3D en toda la película: ", "Preguntas de Cine",
+				"PelÃ­cula de Disney que tuvo un uso del 2D y 3D en toda la pelÃ­cula: ", "Preguntas de Cine",
 				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
 				new ImageIcon("src/principal/imagenes/Cine4.png"),
 				new Object[] { "Atlantis", "El planeta del tesoro", "Mosters Inc.", "Toys Story" }, "Atlantis"); // Respuesta
@@ -365,7 +439,7 @@ public class Preguntas {
 																													// tesoro,
 																													// 1
 
-		RespuestasC[4] = JOptionPane.showOptionDialog(null, "Película de DC que se volvió a estrenar en el año 2021: ",
+		RespuestasC[4] = JOptionPane.showOptionDialog(null, "PelÃ­cula de DC que se volviÃ³ a estrenar en el aÃ±o 2021: ",
 				"Preguntas de Cine", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
 				new ImageIcon("src/principal/imagenes/Cine5.png"),
 				new Object[] { "Batman Vs Superman", "Aquaman", "Wonder women 1884", "Justice league, sycniders cut" },
@@ -400,7 +474,7 @@ public class Preguntas {
 
 	public void revisarRespuestasG() {
 
-		tituloDR = "Puntaje de Georgrafía";
+		tituloDR = "Puntaje de GeorgrafÃ­a";
 
 		// Ciclo for para verificar si la respuesta que selecciono el usuario al pulsar
 		// el boton es igual a la respuesta del arreglo de respuestas de Geografia
