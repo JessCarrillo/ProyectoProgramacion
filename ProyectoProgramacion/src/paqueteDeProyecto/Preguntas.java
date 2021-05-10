@@ -54,6 +54,23 @@ public class Preguntas {
 		ResCorrectasH[2] = 1;
 		ResCorrectasH[3] = 0;
 		ResCorrectasH[4] = 3;
+		ResCorrectasH[5] = 2;
+		ResCorrectasH[6] = 3;
+		ResCorrectasH[7] = 1;
+		ResCorrectasH[8] = 0;
+		ResCorrectasH[9] = 1;
+		ResCorrectasH[10] = 3;
+		ResCorrectasH[11] = 2;
+		ResCorrectasH[12] = 0;
+		ResCorrectasH[13] = 1;
+		ResCorrectasH[14] = 1;
+		ResCorrectasH[15] = 3;
+		ResCorrectasH[16] = 1;
+		ResCorrectasH[17] = 2;
+		ResCorrectasH[18] = 1;
+		ResCorrectasH[19] = 1;
+		
+		
 
 		ResCorrectasG[0] = 2;
 		ResCorrectasG[1] = 1;
@@ -77,9 +94,24 @@ public class Preguntas {
 		PreguntasH[2][0] = "¿Quien fue el primer presidente de Mexico?";
 		PreguntasH[3][0] = "¿Cuando fue la batalla de Puebla?";
 		PreguntasH[4][0] = "¿Como se conocia anteriormente a la actual Ciudad de Mexico?";
+		PreguntasH[5][0] = "Selecciona: la Deidad del Mexico antiguo conocido como \"La Serpiente Emplumada\"";
+		PreguntasH[6][0] = "Selecciona: El mineral que más se extraía en la Nueva España era:";
+		PreguntasH[7][0] = "Selecciona: La Guerra de Reforma fue entre:";
+		PreguntasH[8][0] = "Selecciona: Nombre asignado a Mexico durante la conquista española:";
+		PreguntasH[9][0] = "¿En que año se independizo Texas de Mexico?";
+		PreguntasH[10][0]= "¿Cuantos años duro \"El Porfiriato\" ?";
+		PreguntasH[11][0] = "¿Como murio Francisco Imadero?";
+		PreguntasH[12][0] = "¿En que año se firmo la actual constitucion de Mexico?";
+		PreguntasH[13][0] = "¿Como murio Pancho Villa?";
+		PreguntasH[14][0] = "¿Quien fue el primer emperador de Mexico?";
+		PreguntasH[15][0] = "Selecciona: Partido politico fundado por Plutarco Elias Calles en 1929";
+		PreguntasH[16][0] = "Selecciona: Conflicto que Plutarco Elías Calles enfrentó durante su gobierno:";
+		PreguntasH[17][0] = "¿En que gobierno se vendieron los bancos a la iniciativa privada?";
+		PreguntasH[18][0] = "Recibieron ese nombre los hijos de padres españoles nacidos en la nueva España";
+		PreguntasH[19][0] = "Es la ciudad de donde el cura Hidalgo  llamó a la lucha por la Independencia.";
 
 		// Respuestas de Pregunta 1
-		PreguntasH[0][1] = "1810";
+		PreguntasH[0][1] = "1810"; //Res Correcta
 		PreguntasH[0][2] = "1821";
 		PreguntasH[0][3] = "1921";
 		PreguntasH[0][4] = "1841";
@@ -87,17 +119,17 @@ public class Preguntas {
 		// Respuestas de Pregunta 2
 		PreguntasH[1][1] = "10";
 		PreguntasH[1][2] = "12";
-		PreguntasH[1][3] = "11";
+		PreguntasH[1][3] = "11"; //Res Correcta
 		PreguntasH[1][4] = "13";
 
 		// Respuestas de Pregunta 3
 		PreguntasH[2][1] = "Porfirio Diaz";
-		PreguntasH[2][2] = "Guadalupe Victoria";
+		PreguntasH[2][2] = "Guadalupe Victoria"; //Res Correcta
 		PreguntasH[2][3] = "Ignacio Allende";
 		PreguntasH[2][4] = "Agustín de Iturbide";
 
 		// Respuestas de Pregunta 4
-		PreguntasH[3][1] = "5/05/1862";
+		PreguntasH[3][1] = "5/05/1862"; //Res Correcta
 		PreguntasH[3][2] = "5/05/1962";
 		PreguntasH[3][3] = "5/05/1866";
 		PreguntasH[3][4] = "5/05/1966";
@@ -106,9 +138,97 @@ public class Preguntas {
 		PreguntasH[4][1] = "México Querido";
 		PreguntasH[4][2] = "Républica";
 		PreguntasH[4][3] = "México";
-		PreguntasH[4][4] = "Distrito Federal";
-
-		//
+		PreguntasH[4][4] = "Distrito Federal"; //Res Correcta
+		
+		//Respuestas de Pregunta 6
+		PreguntasH [5][1] = "Ometecuhtli"; 
+		PreguntasH [5][2] = "Huitzilopochtli";
+	    PreguntasH [5][3] = "Quetzalcóatl"; //Res Correcta
+		PreguntasH [5][4] = "Ostoyollotzin";
+				
+		//Respuestas de Pregunta 7
+	    PreguntasH [6][1] = "Diamante";
+		PreguntasH [6][2] = "Oro";
+		PreguntasH [6][3] = "Metal";
+		PreguntasH [6][4] = "Plata"; //Res Correcta
+				
+		//Respuestas de Pregunta 8
+		PreguntasH [7][1] = "Republicanos e indigenas";
+		PreguntasH [7][2] = "Liberales y Conservadores"; //Res Correcta;
+		PreguntasH [7][3] = "Españoles y Mexicanos";
+		PreguntasH [7][4] = "PRI vs PAN";
+				
+		//Respuestas de Pregunta 9
+		PreguntasH [8][1] = "Nueva España"; //Res Correcta
+		PreguntasH [8][2] = "Union Europea";
+		PreguntasH [8][3] = "Conia Española";
+		PreguntasH [8][4] = "España Unificada";
+				
+		//Respuestas de Preguntas 10
+		PreguntasH [9][1] = "1810";
+		PreguntasH [9][2] = "1836"; //Res Correcta
+		PreguntasH [9][3] = "1832";
+		PreguntasH [9][4] = "1998";
+				
+		//Respuestas de Preguntas 11
+		PreguntasH [10][1] = "32";
+		PreguntasH [10][2] = "25";
+		PreguntasH [10][3] = "45";
+		PreguntasH [10][4] = "35"; //Res Correcta
+				
+		//Respuestas de Preguntas 12
+		PreguntasH [11][1] = "Asesinado"; 
+		PreguntasH [11][2] = "Muerte Natural";
+		PreguntasH [11][3] = "Fusilado"; //Res Correcta
+		PreguntasH [11][4] = "Suicidio";
+				
+		//Respuestasd e Preguntas 13
+		PreguntasH [12][1] = "1917"; //Res Correcta
+		PreguntasH [12][2] = "1832";
+		PreguntasH [12][3] = "1927";
+		PreguntasH [12][4] = "2000";
+				
+		//Respuestas de Preguntas 14
+		PreguntasH [13][1] = "Muerte Natural";
+		PreguntasH [13][2] = "Asesinado"; //Res Correcta
+		PreguntasH [13][3] = "Fusilado";
+		PreguntasH [13][4] = "Suicido";
+				
+		//Respuestas de Preguntas 15
+		PreguntasH [14][1] = "Miguel Allende";
+		PreguntasH [14][2] = "Agustin de Iturbide"; //Res Correcta
+		PreguntasH [14][3] = "Nicolas Bravo";
+		PreguntasH [14][4] = "Pedro de Garibay";
+				
+		//Respuestas de Preguntas 16
+		PreguntasH [15][1] = "Partido Comunista Mexicano (PCM)";
+		PreguntasH [15][2] = "Partido Revolucionario Institucional (PRI) ";
+		PreguntasH [15][3] = "Partido Accion Nacional (PAN)";
+		PreguntasH [15][4] = "Partido Nacional Revolucionario (PNR)"; //Res Correcta
+				
+		//Respuestas de Preguntas 17
+		PreguntasH [16][1] = "Guerra de los Pasteles";
+		PreguntasH [16][2] = "Guerra Cristera"; //Res Correcta
+		PreguntasH [16][3] = "2da Guerra Mundial";
+		PreguntasH [16][4] = "Invasion Norte Americana";
+				
+		//Respuestas de Preguntas 18
+		PreguntasH [17][1] = "Luis Echeverria";
+		PreguntasH [17][2] = "Vicente Fox";
+		PreguntasH [17][3] = "Carlos Salinas"; //Res Correcta
+		PreguntasH [17][4] = "Enrique Peñanieto";
+				
+		//Respuestas de Pregunta 19
+		PreguntasH [18][1] = "Mestizo";
+		PreguntasH [18][2] = "Criollo"; //Res Correcta
+		PreguntasH [18][3] = "Mexica";
+		PreguntasH [18][4] = "Jesuita";
+				
+		//Respuestas de Pregunta 20
+		PreguntasH [19][1] = "Tijuana B.C";
+		PreguntasH [19][2] = "Dolores, Guanajuato"; //Res Correcta
+		PreguntasH [19][3] = "Atotonilco";
+		PreguntasH [19][4] = "Queretaro";
 
 	}
 
