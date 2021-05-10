@@ -39,12 +39,6 @@ public class Preguntas {
 		añadirPreguntasyResHistoria();
 		añadirPreguntasyResGeografia();
 		
-		PreguntasG[0][0] = "¿Cuál es el país más grande del mundo?";
-		PreguntasG[0][1] = "¿Cuántos países hay en el mundo?";
-		PreguntasG[0][2] = "¿Cuál es la ciudad más poblada del mundo?";
-		PreguntasG[0][3] = "¿Cuál es el rio más largo del mundo?";
-		PreguntasG[0][4] = "¿Qué país es el segundo más grande del mundo en términos de población?";
-		
 		PreguntasC[0] = "¿Película que casi le da un infarto a su director Brad Bierd?";
 		PreguntasC[1] = "¿Palabra más conocida del Capitán América de Los Vengadores?";
 		PreguntasC[2] = "¿Cuál era la película con mas taquilla antes de ser Los Vengadores ENDGAME?";
@@ -104,11 +98,11 @@ public class Preguntas {
 	public void añadirPreguntasyResGeografia() {
 		
 		//Preguntas
-		PreguntasH[0][0] = "Selecciona el año en que inicio la guerra de independencia de Mexico";
-		PreguntasH[1][0] = "¿Cuantos año duro la guerra de independencia de Mexico?";
-		PreguntasH[2][0] = "¿Quien fue el primer presidente de Mexico?";
-		PreguntasH[3][0] = "¿Cuando fue la batalla de Puebla?";
-		PreguntasH[4][0] = "¿Como se conocia anteriormente a la actual Ciudad de Mexico?";
+		PreguntasG[0][0] = "¿Cuál es el país más grande del mundo?";
+		PreguntasG[0][1] = "¿Cuántos países hay en el mundo?";
+		PreguntasG[0][2] = "¿Cuál es la ciudad más poblada del mundo?";
+		PreguntasG[0][3] = "¿Cuál es el rio más largo del mundo?";
+		PreguntasG[0][4] = "¿Qué país es el segundo más grande del mundo en términos de población?";
 		
 		//Respuestas de Pregunta 1
 		PreguntasH[0][1] = "1810";
