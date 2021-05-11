@@ -49,9 +49,9 @@ public class Preguntas {
 
 		// Arrelos con respuestas correctas según indice regresado en la variable res de
 		// los botones
-		ResCorrectasH[0] = 0;
-		ResCorrectasH[1] = 2;
-		ResCorrectasH[2] = 1;
+		ResCorrectasH[0] = 0; //Respuesta correcta pregunta 1 Historia
+		ResCorrectasH[1] = 2; //Respuesta correcta pregunta 2 Historia
+		ResCorrectasH[2] = 1; //Respuesta correcta pregunta 3 Historia
 		ResCorrectasH[3] = 0;
 		ResCorrectasH[4] = 3;
 		ResCorrectasH[5] = 2;
@@ -67,9 +67,8 @@ public class Preguntas {
 		ResCorrectasH[15] = 3;
 		ResCorrectasH[16] = 1;
 		ResCorrectasH[17] = 2;
-		ResCorrectasH[18] = 1;
-		ResCorrectasH[19] = 1;
-		
+		ResCorrectasH[18] = 1; //Respuesta correcta pregunta 19 Historia
+		ResCorrectasH[19] = 1; //Respuesta correcta pregunta 20 Historia
 		
 
 		ResCorrectasG[0] = 2;
@@ -108,7 +107,7 @@ public class Preguntas {
 		PreguntasH[16][0] = "Selecciona: Conflicto que Plutarco Elías Calles enfrentó durante su gobierno:";
 		PreguntasH[17][0] = "¿En que gobierno se vendieron los bancos a la iniciativa privada?";
 		PreguntasH[18][0] = "Recibieron ese nombre los hijos de padres españoles nacidos en la nueva España";
-		PreguntasH[19][0] = "Es la ciudad de donde el cura Hidalgo  llamó a la lucha por la Independencia.";
+		PreguntasH[19][0] = "Es la ciudad de donde el cura Hidalgo llamó a la lucha por la Independencia.";
 
 		// Respuestas de Pregunta 1
 		PreguntasH[0][1] = "1810"; //Res Correcta
@@ -153,7 +152,7 @@ public class Preguntas {
 		PreguntasH [6][4] = "Plata"; //Res Correcta
 				
 		//Respuestas de Pregunta 8
-		PreguntasH [7][1] = "Republicanos e indigenas";
+		PreguntasH [7][1] = "Republicanos e indígenas";
 		PreguntasH [7][2] = "Liberales y Conservadores"; //Res Correcta;
 		PreguntasH [7][3] = "Españoles y Mexicanos";
 		PreguntasH [7][4] = "PRI vs PAN";
