@@ -33,6 +33,8 @@ public class Preguntas {
 
 	String nombre = "";
 	boolean encontrado;
+	int totalP = (PreguntasH.length/2); //Variable para el total de preguntas a desplegar
+	//String nombreArreglo;
 
 	public void añadirPreguntasYRespuestas() {
 
@@ -262,19 +264,19 @@ public class Preguntas {
 
 	public void desplegarPreguntasHistoria() {
 
-		int PreguntaRealizada[] = new int[5]; //Cambiar despues a int[PreguntasH.lenght] //PreguntaRealizada hasta 10
+		int PreguntaRealizada[] = new int[totalP]; //Cambiar despues a int[PreguntasH.lenght] //PreguntaRealizada hasta 10 //Era antes [5]
 		int cont = 0;
 		encontrado = false;
 		
-		for (int i = 0; i < 5; i++) { //Ciclo hasta 10 
+		for (int i = 0; i < totalP; i++) { //Ciclo hasta 10 //Era antes [5]
 			
-			int Random = (int) Math.floor(Math.random() * 5); //Random hasta 20
+			int Random = (int) Math.floor(Math.random() * PreguntasH.length); //Random hasta 20 //Era antes * 5
 			
 			if(i==0) {
 				PreguntaRealizada[cont] = Random;
 				RespuestasH[Random] = JOptionPane.showOptionDialog(null, PreguntasH[Random][0], "Preguntas de Historia",
 						JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
-						new ImageIcon("src/paqueteDeProyecto/imagenes/Historia" + i +".png"),
+						new ImageIcon("src/paqueteDeProyecto/imagenes/Historia" + Random +".png"),
 						new Object[] { PreguntasH[Random][1], PreguntasH[Random][2], PreguntasH[Random][3], PreguntasH[Random][4]},
 						PreguntasH[Random][1]);
 			}
@@ -294,7 +296,7 @@ public class Preguntas {
 					PreguntaRealizada[cont] = Random;
 					RespuestasH[Random] = JOptionPane.showOptionDialog(null, PreguntasH[Random][0], "Preguntas de Historia",
 							JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
-							new ImageIcon("src/paqueteDeProyecto/imagenes/Historia" + i +".png"),
+							new ImageIcon("src/paqueteDeProyecto/imagenes/Historia" + Random +".png"),
 							new Object[] { PreguntasH[Random][1], PreguntasH[Random][2], PreguntasH[Random][3], PreguntasH[Random][4]},
 							PreguntasH[Random][1]);
 				}
@@ -381,16 +383,6 @@ public class Preguntas {
 				new Object[] { "Batman Vs Superman", "Aquaman", "Wonder women 1884", "Justice league, sycniders cut" },
 				"Batman Vs Superman"); // Respuesta correcta Justice league, sycniders cut, 3
 
-		/*
-		 * Implementaciones posteriores con ciclo for entrada de respuestas del usuario
-		 * for(int cont=0; cont<=4;cont++) {
-		 * 
-		 * res = Integer.parseInt(JOptionPane.showInputDialog(null, PreguntasC[cont],
-		 * "Pregunta de Cine " + (cont+1),JOptionPane.PLAIN_MESSAGE)); //Obtener
-		 * respuesta de usuario JOptionPane.showMessageDialog(null, res);
-		 * 
-		 * }
-		 */
 	}
 
 	public void revisarRespuestasH() {
@@ -399,7 +391,7 @@ public class Preguntas {
 
 		// Ciclo for para verificar si la respuesta que selecciono el usuario al pulsar
 		// el boton es igual a la respuesta del arreglo de respuestas de Historia
-		for (int cont = 0; cont <= 4; cont++) {
+		for (int cont = 0; cont <= totalP; cont++) {
 
 			if (RespuestasH[cont] == ResCorrectasH[cont]) {
 				contAcertadas = contAcertadas + 1;
