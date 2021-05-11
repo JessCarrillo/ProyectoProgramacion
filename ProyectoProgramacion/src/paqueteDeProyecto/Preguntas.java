@@ -71,6 +71,7 @@ public class Preguntas {
 		ResCorrectasH[17] = 2;
 		ResCorrectasH[18] = 1; //Respuesta correcta pregunta 19 Historia
 		ResCorrectasH[19] = 1; //Respuesta correcta pregunta 20 Historia
+	
 		
 
 		ResCorrectasG[0] = 2;
