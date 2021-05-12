@@ -232,29 +232,139 @@ public class Preguntas {
 
 		// Preguntas Geografia
 		PreguntasG[0][0] = "¿Cuál es el país más grande del mundo?";
-		PreguntasG[0][1] = "¿Cuántos países hay en el mundo?";
-		PreguntasG[0][2] = "¿Cuál es la ciudad más poblada del mundo?";
-		PreguntasG[0][3] = "¿Cuál es el rio más largo del mundo?";
-		PreguntasG[0][4] = "¿Qué país es el segundo más grande del mundo en términos de población?";
+		PreguntasG[1][0] = "¿Cuántos países hay en el mundo?";
+		PreguntasG[2][0] = "¿Cuál es la ciudad más poblada del mundo?";
+		PreguntasG[3][0] = "¿Cuál es el rio más largo del mundo?";
+		PreguntasG[4][0] = "¿Qué país es el segundo más grande del mundo en términos de población?";
+		PreguntasG[5][0] = "¿Qué es Zelandia?";
+		PreguntasG[6][0] = "¿Cuál es el país de los 1.000 lagos?";
+		PreguntasG[7][0] = "¿Dónde está la región más pobre del mundo?";
+		PreguntasG[8][0] = "El río más largo de Europa es...";
+		PreguntasG[9][0] = "¿A qué país pertenece esta bandera?";
+		PreguntasG[10][0] = "¿Sabes cuál es la ciudad más antigua del mundo?";
+		PreguntasG[11][0] = "¿Cuál es el desierto cálido más grande de la tierra?";
+		PreguntasG[12][0] = "¿Cuál es el país más pequeño del mundo?";
+		PreguntasG[13][0] =	"¿Cuál es la montaña más alta del mundo?";
+		PreguntasG[14][0] =	"¿Qué país tiene el mayor número de lagos naturales del planeta?";
+		PreguntasG[15][0] =	"¿Cuál es la capital de China?";
+		PreguntasG[16][0] =	"¿En qué país se encuentra la Torre de Belém?";
+		PreguntasG[17][0] =	"¿Cuál es el país que tiene más pirámides en el mundo?";
+		PreguntasG[18][0] =	"";
+		PreguntasG[19][0] =	"";
 
 		// Respuestas de Pregunta 1
-		PreguntasH[0][1] = "1810";
-		PreguntasH[0][2] = "1821";
-		PreguntasH[0][3] = "1921";
-		PreguntasH[0][4] = "1841";
+		PreguntasH[0][1] = "E.U.A";
+		PreguntasH[0][2] = "México";
+		PreguntasH[0][3] = "Rusia"; //Res Correcta
+		PreguntasH[0][4] = "Brasil";
 
 		// Respuestas de Pregunta 2
-		PreguntasH[1][1] = "10";
-		PreguntasH[1][2] = "12";
-		PreguntasH[1][3] = "11";
-		PreguntasH[1][4] = "13";
+		PreguntasH[1][1] = "200";
+		PreguntasH[1][2] = "195"; //Res Correcta
+		PreguntasH[1][3] = "179";
+		PreguntasH[1][4] = "198";
 
 		// Respuestas de Pregunta 3
-		PreguntasH[1][1] = "10";
-		PreguntasH[1][2] = "12";
-		PreguntasH[1][3] = "11";
-		PreguntasH[1][4] = "13";
+		PreguntasH[2][1] = "Japón"; //Res Correcta
+		PreguntasH[2][2] = "Francia";
+		PreguntasH[2][3] = "España";
+		PreguntasH[2][4] = "Alemania";
+		
+		// Respuestas de Pregunta 4
+		PreguntasH[3][1] = "Río Bravo"; 
+		PreguntasH[3][2] = "Río Volga";
+		PreguntasH[3][3] = "Río Balsas";
+		PreguntasH[3][4] = "Río Nilo"; //Res Correcta
+		
+		// Respuestas de Pregunta 5
+		PreguntasH[4][1] = "China"; 
+		PreguntasH[4][2] = "Rusia";
+		PreguntasH[4][3] = "India"; //Res Correcta
+		PreguntasH[4][4] = "Indonesia"; 
 
+		// Respuestas de Pregunta 5
+		PreguntasH[5][1] = "Una ciudad \nislandesa"; 
+		PreguntasH[5][2] = "Un parque \ntemático";
+		PreguntasH[5][3] = "Un país del \nhemisferio norte"; 
+		PreguntasH[5][4] = "Un continente"; //Res Correcta
+		
+		// Respuestas de Pregunta 6
+		PreguntasH[5][1] = "Una ciudad \nislandesa"; 
+		PreguntasH[5][2] = "Un parque \ntemático";
+		PreguntasH[5][3] = "Un país del \nhemisferio norte"; 
+		PreguntasH[5][4] = "Un continente"; //Res Correcta
+		
+		// Respuestas de Pregunta 7
+		PreguntasH[6][1] = "Finlandia"; //Res Correcta
+		PreguntasH[6][2] = "Estados Unidos";
+		PreguntasH[6][3] = "Canadá"; 
+		PreguntasH[6][4] = "Brasil"; 
+		
+		// Respuestas de Pregunta 8
+		PreguntasH[7][1] = "En Zimbabue"; 
+		PreguntasH[7][2] = "En Honduras";
+		PreguntasH[7][3] = "En Sahel"; //Res Correcta
+		PreguntasH[7][4] = "En Nepal"; 
+		
+		// Respuestas de Pregunta 9
+		PreguntasH[8][1] = "El Tajo"; 
+		PreguntasH[8][2] = "El Volga"; //Res Correcta
+		PreguntasH[8][3] = "El Támesis"; 
+		PreguntasH[8][4] = "El Ebro";
+		
+		// Respuestas de Pregunta 10
+		PreguntasH[9][1] = "Mongolia"; 
+		PreguntasH[9][2] = "Palaos"; 
+		PreguntasH[9][3] = "Bangladés"; //Res Correcta
+		PreguntasH[9][4] = "Macedonia";
+		
+		// Respuestas de Pregunta 11
+		PreguntasH[10][1] = "Luxor"; 
+		PreguntasH[10][2] = "Ur"; 
+		PreguntasH[10][3] = "Biblos";
+		PreguntasH[10][4] = "Jericó"; //Res Correcta
+		
+		// Respuestas de Pregunta 12
+		PreguntasH[11][1] = "El Sáhara"; //Res Correcta
+		PreguntasH[11][2] = "Motañas Flameantes"; 
+		PreguntasH[11][3] = "El desierto de Lut";
+		PreguntasH[11][4] = "Libia"; 
+		
+		// Respuestas de Pregunta 13
+		PreguntasH[12][1] = "Mónaco"; 
+		PreguntasH[12][2] = "Maldivas"; 
+		PreguntasH[12][3] = "El Vaticano"; //Res Correcta
+		PreguntasH[12][4] = "Nauru"; 
+		
+		// Respuestas de Pregunta 14
+		PreguntasH[13][1] = "Monte Everest"; //Res Correcta
+		PreguntasH[13][2] = "Monto Fuji"; 
+		PreguntasH[13][3] = "Makalu"; 
+		PreguntasH[13][4] = "Cho Oyu"; 
+		
+		// Respuestas de Pregunta 15
+		PreguntasH[14][1] = "Kenia, Uganda"; 
+		PreguntasH[14][2] = "La Madre Rusia"; 
+		PreguntasH[14][3] = "Canáda, USA"; //Res Correcta
+		PreguntasH[14][4] = "Azerbaiyán, Irán";
+		
+		// Respuestas de Pregunta 16
+		PreguntasH[15][1] = "Shanghái"; 
+		PreguntasH[15][2] = "Pekín"; //Res Correcta
+		PreguntasH[15][3] = "Cantón"; 
+		PreguntasH[15][4] = "Shenzhen";
+		
+		// Respuestas de Pregunta 17
+		PreguntasH[16][1] = "México"; 
+		PreguntasH[16][2] = "Jordania"; 
+		PreguntasH[16][3] = "Italia"; 
+		PreguntasH[16][4] = "Portugal"; //Res Correcta
+		
+		// Respuestas de Pregunta 18
+		PreguntasH[17][1] = "México"; 
+		PreguntasH[17][2] = "Jordania"; 
+		PreguntasH[17][3] = "Italia"; 
+		PreguntasH[17][4] = "Portugal"; //Res Correcta
 	}
 	
 	public void añadirPreguntasyResCine() {
