@@ -15,7 +15,7 @@ public class Preguntas {
 	// Declaración e Inicialización de Variables Globales
 	String PreguntasH[][] = new String[20][5];
 	String PreguntasG[][] = new String[20][5];
-	String PreguntasC[] = new String[5];
+	String PreguntasC[][] = new String[20][5];
 
 	int RespuestasH[] = new int[20]; // Arreglos de 5 espacios para las respuestas del usuario
 	int RespuestasG[] = new int[20];
@@ -42,12 +42,7 @@ public class Preguntas {
 
 		añadirPreguntasyResHistoria();
 		añadirPreguntasyResGeografia();
-
-		PreguntasC[0] = "¿Película que casi le da un infarto a su director Brad Bierd?";
-		PreguntasC[1] = "¿Palabra más conocida del Capitán América de Los Vengadores?";
-		PreguntasC[2] = "¿Cuál era la película con mas taquilla antes de ser Los Vengadores ENDGAME?";
-		PreguntasC[3] = "Película de Disney que tuvo un uso del 2D y 3D en toda la película: ";
-		PreguntasC[4] = "Película de DC que se volvió a estrenar en el año 2021: ";
+		añadirPreguntasyResCine();
 
 		// Arrelos con respuestas correctas según indice regresado en la variable res de
 		// los botones
@@ -72,7 +67,6 @@ public class Preguntas {
 		ResCorrectasH[18] = 1; //Respuesta correcta pregunta 19 Historia
 		ResCorrectasH[19] = 1; //Respuesta correcta pregunta 20 Historia
 	
-		
 
 		ResCorrectasG[0] = 2;
 		ResCorrectasG[1] = 1;
@@ -260,6 +254,35 @@ public class Preguntas {
 		PreguntasH[1][2] = "12";
 		PreguntasH[1][3] = "11";
 		PreguntasH[1][4] = "13";
+
+	}
+	
+	public void añadirPreguntasyResCine() {
+
+		// Preguntas Cine
+		PreguntasC[0][0] = "¿Película que casi le da un infarto a su director Brad Bierd?";
+		PreguntasC[0][1] = "¿Palabra más conocida del Capitán América de Los Vengadores?";
+		PreguntasC[0][2] = "¿Cuál era la película con mas taquilla antes de ser Los Vengadores ENDGAME?";
+		PreguntasC[0][3] = "Película de Disney que tuvo un uso del 2D y 3D en toda la película: ";
+		PreguntasC[0][4] = "Película de DC que se volvió a estrenar en el año 2021: ";
+
+		// Respuestas de Pregunta 1
+		PreguntasC[0][1] = "1810";
+		PreguntasC[0][2] = "1821";
+		PreguntasC[0][3] = "1921";
+		PreguntasC[0][4] = "1841";
+
+		// Respuestas de Pregunta 2
+		PreguntasC[1][1] = "10";
+		PreguntasC[1][2] = "12";
+		PreguntasC[1][3] = "11";
+		PreguntasC[1][4] = "13";
+
+		// Respuestas de Pregunta 3
+		PreguntasC[1][1] = "10";
+		PreguntasC[1][2] = "12";
+		PreguntasC[1][3] = "11";
+		PreguntasC[1][4] = "13";
 
 	}
 
