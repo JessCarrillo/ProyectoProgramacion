@@ -1,4 +1,4 @@
-/*Integrantes:
+/*Integrantes: HOLA HOLA 
 Rubiera Villareal Vanessa Estefania
 Carrillo Arellano Jesus David
 Aquino Chavez Luis Daniel
@@ -697,7 +697,7 @@ public class Preguntas {
 		}
 	}
 
-	public void reiniciarVariables() {
+	public void reiniciarVariables() { 
 
 		// Metodo para reiniciar variables para cada vez que vuelva a jugar de nuevo el
 		// jugador
