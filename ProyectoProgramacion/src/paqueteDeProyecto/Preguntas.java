@@ -237,7 +237,7 @@ public class Preguntas {
 		PreguntasG[3][0] = "¿Cuál es el rio más largo del mundo?";
 		PreguntasG[4][0] = "¿Qué país es el segundo más grande del mundo en términos de población?";
 		PreguntasG[5][0] = "¿Qué es Zelandia?";
-		PreguntasG[6][0] = "¿Cuál es el país de los 1.000 lagos?";
+		PreguntasG[6][0] = "¿Cuál es el país de los 1,000 lagos?";
 		PreguntasG[7][0] = "¿Dónde está la región más pobre del mundo?";
 		PreguntasG[8][0] = "El río más largo de Europa es...";
 		PreguntasG[9][0] = "¿A qué país pertenece esta bandera?";
@@ -361,10 +361,10 @@ public class Preguntas {
 		PreguntasH[16][4] = "Portugal"; //Res Correcta
 		
 		// Respuestas de Pregunta 18
-		PreguntasH[17][1] = "México"; 
-		PreguntasH[17][2] = "Jordania"; 
-		PreguntasH[17][3] = "Italia"; 
-		PreguntasH[17][4] = "Portugal"; //Res Correcta
+		PreguntasH[17][1] = "Sudán"; //Res Correcta
+		PreguntasH[17][2] = "Egipto"; 
+		PreguntasH[17][3] = "El Salvador"; 
+		PreguntasH[17][4] = "Palaos"; 
 	}
 	
 	public void añadirPreguntasyResCine() {
