@@ -17,11 +17,11 @@ public class Preguntas {
 	String PreguntasG[][] = new String[20][5];
 	String PreguntasC[][] = new String[20][5];
 
-	int RespuestasH[] = new int[20]; // Arreglos de 5 espacios para las respuestas del usuario
+	int RespuestasH[] = new int[20]; // Arreglos de 20 espacios para las respuestas del usuario
 	int RespuestasG[] = new int[20];
 	int RespuestasC[] = new int[20];
 
-	int ResCorrectasH[] = new int[20]; // Arreglos de 5 espacios para respuestas correctas
+	int ResCorrectasH[] = new int[20]; // Arreglos de 20 espacios para respuestas correctas
 	int ResCorrectasG[] = new int[20];
 	int ResCorrectasC[] = new int[20];
 	
@@ -74,11 +74,26 @@ public class Preguntas {
 		ResCorrectasG[3] = 3;
 		ResCorrectasG[4] = 2;
 
-		ResCorrectasC[0] = 0;
+		ResCorrectasC[0] = 1;
 		ResCorrectasC[1] = 2;
-		ResCorrectasC[2] = 0;
+		ResCorrectasC[2] = 3;
 		ResCorrectasC[3] = 1;
 		ResCorrectasC[4] = 3;
+		ResCorrectasC[5] = 1;
+		ResCorrectasC[6] = 0;
+		ResCorrectasC[7] = 3;
+		ResCorrectasC[8] = 1;
+		ResCorrectasC[9] = 1;
+		ResCorrectasC[10] = 3;
+		ResCorrectasC[11] = 1;
+		ResCorrectasC[12] = 2;
+		ResCorrectasC[13] = 1;
+		ResCorrectasC[14] = 2;
+		ResCorrectasC[15] = 1;
+		ResCorrectasC[16] = 0;
+		ResCorrectasC[17] = 3;
+		ResCorrectasC[18] = 0;
+		ResCorrectasC[19] = 1;
 
 	}
 
@@ -253,146 +268,263 @@ public class Preguntas {
 		PreguntasG[19][0] =	"";
 
 		// Respuestas de Pregunta 1
-		PreguntasH[0][1] = "E.U.A";
-		PreguntasH[0][2] = "México";
-		PreguntasH[0][3] = "Rusia"; //Res Correcta
-		PreguntasH[0][4] = "Brasil";
+		PreguntasG[0][1] = "E.U.A";
+		PreguntasG[0][2] = "México";
+		PreguntasG[0][3] = "Rusia"; //Res Correcta
+		PreguntasG[0][4] = "Brasil";
 
 		// Respuestas de Pregunta 2
-		PreguntasH[1][1] = "200";
-		PreguntasH[1][2] = "195"; //Res Correcta
-		PreguntasH[1][3] = "179";
-		PreguntasH[1][4] = "198";
+		PreguntasG[1][1] = "200";
+		PreguntasG[1][2] = "195"; //Res Correcta
+		PreguntasG[1][3] = "179";
+		PreguntasG[1][4] = "198";
 
 		// Respuestas de Pregunta 3
-		PreguntasH[2][1] = "Japón"; //Res Correcta
-		PreguntasH[2][2] = "Francia";
-		PreguntasH[2][3] = "España";
-		PreguntasH[2][4] = "Alemania";
+		PreguntasG[2][1] = "Japón"; //Res Correcta
+		PreguntasG[2][2] = "Francia";
+		PreguntasG[2][3] = "España";
+		PreguntasG[2][4] = "Alemania";
 		
 		// Respuestas de Pregunta 4
-		PreguntasH[3][1] = "Río Bravo"; 
-		PreguntasH[3][2] = "Río Volga";
-		PreguntasH[3][3] = "Río Balsas";
-		PreguntasH[3][4] = "Río Nilo"; //Res Correcta
+		PreguntasG[3][1] = "Río Bravo"; 
+		PreguntasG[3][2] = "Río Volga";
+		PreguntasG[3][3] = "Río Balsas";
+		PreguntasG[3][4] = "Río Nilo"; //Res Correcta
 		
 		// Respuestas de Pregunta 5
-		PreguntasH[4][1] = "China"; 
-		PreguntasH[4][2] = "Rusia";
-		PreguntasH[4][3] = "India"; //Res Correcta
-		PreguntasH[4][4] = "Indonesia"; 
+		PreguntasG[4][1] = "China"; 
+		PreguntasG[4][2] = "Rusia";
+		PreguntasG[4][3] = "India"; //Res Correcta
+		PreguntasG[4][4] = "Indonesia"; 
 
 		// Respuestas de Pregunta 5
-		PreguntasH[5][1] = "Una ciudad \nislandesa"; 
-		PreguntasH[5][2] = "Un parque \ntemático";
-		PreguntasH[5][3] = "Un país del \nhemisferio norte"; 
-		PreguntasH[5][4] = "Un continente"; //Res Correcta
+		PreguntasG[5][1] = "Una ciudad \nislandesa"; 
+		PreguntasG[5][2] = "Un parque \ntemático";
+		PreguntasG[5][3] = "Un país del \nhemisferio norte"; 
+		PreguntasG[5][4] = "Un continente"; //Res Correcta
 		
 		// Respuestas de Pregunta 6
-		PreguntasH[5][1] = "Una ciudad \nislandesa"; 
-		PreguntasH[5][2] = "Un parque \ntemático";
-		PreguntasH[5][3] = "Un país del \nhemisferio norte"; 
-		PreguntasH[5][4] = "Un continente"; //Res Correcta
+		PreguntasG[5][1] = "Una ciudad \nislandesa"; 
+		PreguntasG[5][2] = "Un parque \ntemático";
+		PreguntasG[5][3] = "Un país del \nhemisferio norte"; 
+		PreguntasG[5][4] = "Un continente"; //Res Correcta
 		
 		// Respuestas de Pregunta 7
-		PreguntasH[6][1] = "Finlandia"; //Res Correcta
-		PreguntasH[6][2] = "Estados Unidos";
-		PreguntasH[6][3] = "Canadá"; 
-		PreguntasH[6][4] = "Brasil"; 
+		PreguntasG[6][1] = "Finlandia"; //Res Correcta
+		PreguntasG[6][2] = "Estados Unidos";
+		PreguntasG[6][3] = "Canadá"; 
+		PreguntasG[6][4] = "Brasil"; 
 		
 		// Respuestas de Pregunta 8
-		PreguntasH[7][1] = "En Zimbabue"; 
-		PreguntasH[7][2] = "En Honduras";
-		PreguntasH[7][3] = "En Sahel"; //Res Correcta
-		PreguntasH[7][4] = "En Nepal"; 
+		PreguntasG[7][1] = "En Zimbabue"; 
+		PreguntasG[7][2] = "En Honduras";
+		PreguntasG[7][3] = "En Sahel"; //Res Correcta
+		PreguntasG[7][4] = "En Nepal"; 
 		
 		// Respuestas de Pregunta 9
-		PreguntasH[8][1] = "El Tajo"; 
-		PreguntasH[8][2] = "El Volga"; //Res Correcta
-		PreguntasH[8][3] = "El Támesis"; 
-		PreguntasH[8][4] = "El Ebro";
+		PreguntasG[8][1] = "El Tajo"; 
+		PreguntasG[8][2] = "El Volga"; //Res Correcta
+		PreguntasG[8][3] = "El Támesis"; 
+		PreguntasG[8][4] = "El Ebro";
 		
 		// Respuestas de Pregunta 10
-		PreguntasH[9][1] = "Mongolia"; 
-		PreguntasH[9][2] = "Palaos"; 
-		PreguntasH[9][3] = "Bangladés"; //Res Correcta
-		PreguntasH[9][4] = "Macedonia";
+		PreguntasG[9][1] = "Mongolia"; 
+		PreguntasG[9][2] = "Palaos"; 
+		PreguntasG[9][3] = "Bangladés"; //Res Correcta
+		PreguntasG[9][4] = "Macedonia";
 		
 		// Respuestas de Pregunta 11
-		PreguntasH[10][1] = "Luxor"; 
-		PreguntasH[10][2] = "Ur"; 
-		PreguntasH[10][3] = "Biblos";
-		PreguntasH[10][4] = "Jericó"; //Res Correcta
+		PreguntasG[10][1] = "Luxor"; 
+		PreguntasG[10][2] = "Ur"; 
+		PreguntasG[10][3] = "Biblos";
+		PreguntasG[10][4] = "Jericó"; //Res Correcta
 		
 		// Respuestas de Pregunta 12
-		PreguntasH[11][1] = "El Sáhara"; //Res Correcta
-		PreguntasH[11][2] = "Motañas Flameantes"; 
-		PreguntasH[11][3] = "El desierto de Lut";
-		PreguntasH[11][4] = "Libia"; 
+		PreguntasG[11][1] = "El Sáhara"; //Res Correcta
+		PreguntasG[11][2] = "Motañas Flameantes"; 
+		PreguntasG[11][3] = "El desierto de Lut";
+		PreguntasG[11][4] = "Libia"; 
 		
 		// Respuestas de Pregunta 13
-		PreguntasH[12][1] = "Mónaco"; 
-		PreguntasH[12][2] = "Maldivas"; 
-		PreguntasH[12][3] = "El Vaticano"; //Res Correcta
-		PreguntasH[12][4] = "Nauru"; 
+		PreguntasG[12][1] = "Mónaco"; 
+		PreguntasG[12][2] = "Maldivas"; 
+		PreguntasG[12][3] = "El Vaticano"; //Res Correcta
+		PreguntasG[12][4] = "Nauru"; 
 		
 		// Respuestas de Pregunta 14
-		PreguntasH[13][1] = "Monte Everest"; //Res Correcta
-		PreguntasH[13][2] = "Monto Fuji"; 
-		PreguntasH[13][3] = "Makalu"; 
-		PreguntasH[13][4] = "Cho Oyu"; 
+		PreguntasG[13][1] = "Monte Everest"; //Res Correcta
+		PreguntasG[13][2] = "Monto Fuji"; 
+		PreguntasG[13][3] = "Makalu"; 
+		PreguntasG[13][4] = "Cho Oyu"; 
 		
 		// Respuestas de Pregunta 15
-		PreguntasH[14][1] = "Kenia, Uganda"; 
-		PreguntasH[14][2] = "La Madre Rusia"; 
-		PreguntasH[14][3] = "Canáda, USA"; //Res Correcta
-		PreguntasH[14][4] = "Azerbaiyán, Irán";
+		PreguntasG[14][1] = "Kenia, Uganda"; 
+		PreguntasG[14][2] = "La Madre Rusia"; 
+		PreguntasG[14][3] = "Canáda, USA"; //Res Correcta
+		PreguntasG[14][4] = "Azerbaiyán, Irán";
 		
 		// Respuestas de Pregunta 16
-		PreguntasH[15][1] = "Shanghái"; 
-		PreguntasH[15][2] = "Pekín"; //Res Correcta
-		PreguntasH[15][3] = "Cantón"; 
-		PreguntasH[15][4] = "Shenzhen";
+		PreguntasG[15][1] = "Shanghái"; 
+		PreguntasG[15][2] = "Pekín"; //Res Correcta
+		PreguntasG[15][3] = "Cantón"; 
+		PreguntasG[15][4] = "Shenzhen";
 		
 		// Respuestas de Pregunta 17
-		PreguntasH[16][1] = "México"; 
-		PreguntasH[16][2] = "Jordania"; 
-		PreguntasH[16][3] = "Italia"; 
-		PreguntasH[16][4] = "Portugal"; //Res Correcta
+		PreguntasG[16][1] = "México"; 
+		PreguntasG[16][2] = "Jordania"; 
+		PreguntasG[16][3] = "Italia"; 
+		PreguntasG[16][4] = "Portugal"; //Res Correcta
 		
 		// Respuestas de Pregunta 18
-		PreguntasH[17][1] = "Sudán"; //Res Correcta
-		PreguntasH[17][2] = "Egipto"; 
-		PreguntasH[17][3] = "El Salvador"; 
-		PreguntasH[17][4] = "Palaos"; 
+		PreguntasG[17][1] = "Sudán"; //Res Correcta
+		PreguntasG[17][2] = "Egipto"; 
+		PreguntasG[17][3] = "El Salvador"; 
+		PreguntasG[17][4] = "Palaos"; 
 	}
 	
 	public void añadirPreguntasyResCine() {
 
 		// Preguntas Cine
 		PreguntasC[0][0] = "¿Película que casi le da un infarto a su director Brad Bierd?";
-		PreguntasC[0][1] = "¿Palabra más conocida del Capitán América de Los Vengadores?";
-		PreguntasC[0][2] = "¿Cuál era la película con mas taquilla antes de ser Los Vengadores ENDGAME?";
-		PreguntasC[0][3] = "Película de Disney que tuvo un uso del 2D y 3D en toda la película: ";
-		PreguntasC[0][4] = "Película de DC que se volvió a estrenar en el año 2021: ";
+		PreguntasC[1][0] = "¿Palabra más conocida del Capitán América de Los Vengadores?";
+		PreguntasC[2][0] = "¿Cuál era la película con mas taquilla antes de ser Los Vengadores ENDGAME?";
+		PreguntasC[3][0] = "Película de Disney que tuvo un uso del 2D y 3D en toda la película: ";
+		PreguntasC[4][0] = "Película de DC que se volvió a estrenar en el año 2021: ";
+		PreguntasC[5][0] = "¿Cuantos Oscars Consiguio Titanic?";
+		PreguntasC[6][0] = "¿Qué actor no aparece en Pulp Fiction?";
+		PreguntasC[7][0] = "¿Quién dirigió El Pianista?";
+		PreguntasC[8][0] = "Written and Directed By:";
+		PreguntasC[9][0] = "¿Como se llama el horrible vecino de Andy en la pelicula de Toy Story?";
+		PreguntasC[10][0] = "¿Como se llamaban los ladrones de la pelicula \"Mi Pobre Angelito\"?";
+		PreguntasC[11][0] = "Gracias a que pelicula se hicieron populares los dinosaurios";
+		PreguntasC[12][0] = "Selecciona la Pelicula de Zombies por Excelencia";
+		PreguntasC[13][0] = "¿Cómo se llamó la película basada en la vida de Stephen Hawking?";
+		PreguntasC[14][0] = "¿En qué año se estrenó Star Wars: Episodio VII — El despertar de la Fuerza?";
+		PreguntasC[15][0] = "¿En qué año se estrenó El hobbit?";
+		PreguntasC[16][0] = "¿Quién protagonizó Aquaman en 2018?";
+		PreguntasC[17][0] = "¿Quien fue la protagonista de Mujer Maravilla en 2017?";
+		PreguntasC[18][0] = "¿Qué película de Disney se ubica en Escocia medieval?";
+		PreguntasC[19][0] = "¿Qué película animada tiene como personaje principal un villano con una gran cabeza azul?";
 
 		// Respuestas de Pregunta 1
-		PreguntasC[0][1] = "1810";
-		PreguntasC[0][2] = "1821";
-		PreguntasC[0][3] = "1921";
-		PreguntasC[0][4] = "1841";
+		PreguntasC[0][1] = "Ratatoille";
+		PreguntasC[0][2] = "El Gigante de Hierro"; //Res Correcta
+		PreguntasC[0][3] = "El Pianista";
+		PreguntasC[0][4] = "Cars";
 
 		// Respuestas de Pregunta 2
-		PreguntasC[1][1] = "10";
-		PreguntasC[1][2] = "12";
-		PreguntasC[1][3] = "11";
-		PreguntasC[1][4] = "13";
+		PreguntasC[1][1] = "Te Amo 3,000,000";
+		PreguntasC[1][2] = "Entendi esa Referencia";
+		PreguntasC[1][3] = "Vengadores Unidos"; //Res Correcta
+		PreguntasC[1][4] = "Luchas o Mueres";
 
 		// Respuestas de Pregunta 3
-		PreguntasC[1][1] = "10";
-		PreguntasC[1][2] = "12";
-		PreguntasC[1][3] = "11";
-		PreguntasC[1][4] = "13";
+		PreguntasC[2][1] = "Entrenando a Papa";
+		PreguntasC[2][2] = "No se Aceptan Devoluciones";
+		PreguntasC[2][3] = "Avengers: Infinity War";
+		PreguntasC[2][4] = "Avatar"; //Res Correcta
+		
+		// Respuestas de Pregunta 4
+		PreguntasC[3][1] = "Atlantis";
+		PreguntasC[3][2] = "El Planeta del Tesoro"; //Res Correcta
+		PreguntasC[3][3] = "Toy Story";
+		PreguntasC[3][4] = "Monster Inc.";
+		
+		// Respuestas de Pregunta 5
+		PreguntasC[4][1] = "Batman vs Superman";
+		PreguntasC[4][2] = "Wonder Woman";
+		PreguntasC[4][3] = "Wonder Woman 1984";
+		PreguntasC[4][4] = "Jusitice League: Snyder Cut"; //Res Correcta
+		
+		// Respuestas de Pregunta 6
+		PreguntasC[5][1] = "9";
+		PreguntasC[5][2] = "11"; //Res Correcta
+		PreguntasC[5][3] = "10";
+		PreguntasC[5][4] = "7";
+		
+		// Respuestas de Pregunta 7
+		PreguntasC[6][1] = "Tom Hanks"; //Res Correcta
+		PreguntasC[6][2] = "John Travolta";
+		PreguntasC[6][3] = "Bruce Willis";
+		PreguntasC[6][4] = "Uma Thurman"; 
+		
+		// Respuestas de Pregunta 8
+		PreguntasC[7][1] = "Jonathan Demme";
+		PreguntasC[7][2] = "Milos Forman";
+		PreguntasC[7][3] = "Jhonny Deep";
+		PreguntasC[7][4] = "Roman Polanski"; //Res Correcta
+		
+		// Respuestas de Pregunta 9
+		PreguntasC[8][1] = "Tom Hanks";
+		PreguntasC[8][2] = "Quentin Tarantino"; //Res Correcta
+		PreguntasC[8][3] = "Guillermo del Toro";
+		PreguntasC[8][4] = "Alfonso Cuaron";
+		
+		// Respuestas de Pregunta 10
+		PreguntasC[9][1] = "Andy";
+		PreguntasC[9][2] = "Sid"; //Res Correcta
+		PreguntasC[9][3] = "Darla";
+		PreguntasC[9][4] = "Tommy";
+		
+		// Respuestas de Pregunta 11
+		PreguntasC[10][1] = "Luis y Miguel";
+		PreguntasC[10][2] = "Harvey y Marvin";
+		PreguntasC[10][3] = "Barry y Mark";
+		PreguntasC[10][4] = "Harry y Marv"; //Res Correcta
+		
+		// Respuestas de Pregunta 12
+		PreguntasC[11][1] = "ET";
+		PreguntasC[11][2] = "Jurassic Park"; //Res Correcta
+		PreguntasC[11][3] = "Godzilla";
+		PreguntasC[11][4] = "King Konng";
+		
+		// Respuestas de Pregunta 13
+		PreguntasC[12][1] = "ZombieLand";
+		PreguntasC[12][2] = "28 Dias Despues";
+		PreguntasC[12][3] = "La Noche de los Muertos Vivientes"; //Res Correcta
+		PreguntasC[12][4] = "Re-Animator";
+		
+		// Respuestas de Pregunta 14
+		PreguntasC[13][1] = "La teoria del Big Bang";
+		PreguntasC[13][2] = "La teoria del todo"; //Res Correcta;
+		PreguntasC[13][3] = "La teoria del Universo";
+		PreguntasC[13][4] = "L vida de Stephen Hawking";
+		
+		// Respuestas de Pregunta 15
+		PreguntasC[14][1] = "2014";
+		PreguntasC[14][2] = "2016";
+	        PreguntasC[14][3] = "2015"; //Res Correcta
+		PreguntasC[14][4] = "2013";
+		
+		// Respuestas de Pregunta 16
+		PreguntasC[15][1] = "2011";
+		PreguntasC[15][2] = "2012"; //Res Correcta
+		PreguntasC[15][3] = "2015";
+		PreguntasC[15][4] = "2014";
+		
+		// Respuestas de Pregunta 17
+		PreguntasC[16][1] = "Jason Momoa"; //Res Correcta
+		PreguntasC[16][2] = "Robert Downey jr.";
+		PreguntasC[16][3] = "Randall Park";
+		PreguntasC[16][4] = "Tobey Maguire";
+		
+		// Respuestas de Pregunta 18
+		PreguntasC[17][1] = "Robin Wright";
+		PreguntasC[17][2] = "Marion Cotillard";
+		PreguntasC[17][3] = "Michelle Pfeiffer";
+		PreguntasC[17][4] = "Gal Gadot"; //Res Correcta
+		
+		// Respuestas de Pregunta 19
+		PreguntasC[18][1] = "Valiente"; //Res Correcto
+		PreguntasC[18][2] = "Moana";
+		PreguntasC[18][3] = "Merida";
+		PreguntasC[18][4] = "La Princesa y el Sapo";
+		
+		// Respuestas de Pregunta 20
+		PreguntasC[19][1] = "Mi Villano Favorito";
+		PreguntasC[19][2] = "Mega Mente"; //Res Correcta
+		PreguntasC[19][3] = "Los increibles";
+		PreguntasC[19][4] = "Los Minions";
 
 	}
 
