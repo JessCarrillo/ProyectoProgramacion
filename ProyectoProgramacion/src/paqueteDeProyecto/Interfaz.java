@@ -41,7 +41,7 @@ public class Interfaz {
 			switch (opc) {
 			case 0:
 				Question.desplegarPreguntasHistoria();
-				Question.revisarRespuestasH();
+				//Question.revisarRespuestasH();
 				Question.desplegarResultado();
 				break;
 			case 1:

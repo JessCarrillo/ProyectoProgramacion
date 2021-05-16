@@ -25,7 +25,7 @@ public class Preguntas {
 	int ResCorrectasG[] = new int[20];
 	int ResCorrectasC[] = new int[20];
 	
-
+	int Random = 0;
 	int res = 0;
 	int contAcertadas = 0;
 	int puntos = 0;
@@ -72,21 +72,21 @@ public class Preguntas {
 		ResCorrectasG[2] = 0;
 		ResCorrectasG[3] = 3;
 		ResCorrectasG[4] = 2;
-		ResCorrectasG[5] = 4;
-		ResCorrectasG[6] = 1;
-		ResCorrectasG[7] = 3;
-		ResCorrectasG[8] = 2;
-		ResCorrectasG[9] = 3;
-		ResCorrectasG[10] = 4;
-		ResCorrectasG[11] = 1;
-		ResCorrectasG[12] = 3;
-		ResCorrectasG[13] = 1;
-		ResCorrectasG[14] = 3;
-		ResCorrectasG[15] = 2;
-		ResCorrectasG[16] = 4;
-		ResCorrectasG[17] = 1;
-		ResCorrectasG[18] = 3;
-		ResCorrectasG[19] = 4;
+		ResCorrectasG[5] = 3;
+		ResCorrectasG[6] = 0;
+		ResCorrectasG[7] = 2;
+		ResCorrectasG[8] = 1;
+		ResCorrectasG[9] = 2;
+		ResCorrectasG[10] = 3;
+		ResCorrectasG[11] = 0;
+		ResCorrectasG[12] = 2;
+		ResCorrectasG[13] = 0;
+		ResCorrectasG[14] = 2;
+		ResCorrectasG[15] = 1;
+		ResCorrectasG[16] = 3;
+		ResCorrectasG[17] = 0;
+		ResCorrectasG[18] = 2;
+		ResCorrectasG[19] = 3;
 
 		ResCorrectasC[0] = 1;
 		ResCorrectasC[1] = 2;
@@ -549,14 +549,15 @@ public class Preguntas {
 	}
 
 	public void desplegarPreguntasHistoria() {
-
+		
+		tituloDR = "Puntaje de Historia"; 
 		int PreguntaRealizada[] = new int[totalP]; //Cambiar despues a int[PreguntasH.lenght] //PreguntaRealizada hasta 10 //Era antes [5]
 		int cont = 0;
 		encontrado = false;
 		
 		for (int i = 0; i < totalP; i++) { //Ciclo hasta 10 //Era antes [5]
 			
-			int Random = (int) Math.floor(Math.random() * PreguntasH.length); //Random hasta 20 //Era antes * 5
+			Random = (int) Math.floor(Math.random() * PreguntasH.length); //Random hasta 20 //Era antes * 5
 			
 			if(i==0) {
 				PreguntaRealizada[cont] = Random;
@@ -565,6 +566,9 @@ public class Preguntas {
 						new ImageIcon("src/paqueteDeProyecto/imagenes/Historia" + Random +".png"),
 						new Object[] { PreguntasH[Random][1], PreguntasH[Random][2], PreguntasH[Random][3], PreguntasH[Random][4]},
 						PreguntasH[Random][1]);
+				
+				//revisar respuestas de Preguntas de Historia
+				revisarRespuestasH();
 			}
 			else {
 				for(int j=0; j<cont; j++) {
@@ -683,17 +687,10 @@ public class Preguntas {
 
 	public void revisarRespuestasH() {
 
-		tituloDR = "Puntaje de Historia";
-
-		// Ciclo for para verificar si la respuesta que selecciono el usuario al pulsar
-		// el boton es igual a la respuesta del arreglo de respuestas de Historia
-		for (int cont = 0; cont <= totalP; cont++) {
-
-			if (RespuestasH[cont] == ResCorrectasH[cont]) {
+			if (RespuestasH[Random] == ResCorrectasH[Random]) {
 				contAcertadas = contAcertadas + 1;
 				puntos = puntos + 10;
 			}
-		}
 	}
 
 	public void revisarRespuestasG() {
