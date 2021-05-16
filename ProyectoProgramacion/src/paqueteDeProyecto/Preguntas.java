@@ -278,9 +278,9 @@ public class Preguntas {
 		PreguntasG[15][0] =	"¿Cuál es la capital de China?";
 		PreguntasG[16][0] =	"¿En qué país se encuentra la Torre de Belém?";
 		PreguntasG[17][0] =	"¿Cuál es el país que tiene más pirámides en el mundo?";
-		PreguntasG[18][0] =	"¿Cuál es el único continente que tiene tierra en cada uno de los 4 hemisferios?";
-		PreguntasG[19][0] =	"¿En qué país puedes visitar el Machu Picchu?";
-
+		PreguntasG[18][0] =	"¿En qué país puedes visitar el Machu Picchu?";
+		PreguntasG[19][0] =	"¿Cuál es el único continente que tiene tierra en cada uno de los 4 hemisferios?";
+		
 		// Respuestas de Pregunta 1
 		PreguntasG[0][1] = "E.U.A";
 		PreguntasG[0][2] = "México";
@@ -294,10 +294,10 @@ public class Preguntas {
 		PreguntasG[1][4] = "198";
 
 		// Respuestas de Pregunta 3
-		PreguntasG[2][1] = "Japón"; //Res Correcta
-		PreguntasG[2][2] = "Francia";
-		PreguntasG[2][3] = "España";
-		PreguntasG[2][4] = "Alemania";
+		PreguntasG[2][1] = "Tokio, Japón"; //Res Correcta
+		PreguntasG[2][2] = "Nueva York, USA";
+		PreguntasG[2][3] = "Shanghaí, China";
+		PreguntasG[2][4] = "Ciudad de México,\nMéxico";
 		
 		// Respuestas de Pregunta 4
 		PreguntasG[3][1] = "Río Bravo"; 
@@ -594,35 +594,45 @@ public class Preguntas {
 
 	public void desplegarPreguntasGeografia() {
 
-		// res = Integer.parseInt(JOptionPane.showInputDialog(null, PreguntasG[cont],
-		// "Pregunta de Geografía " + (cont+1),JOptionPane.PLAIN_MESSAGE)); //Obtener
-		// respuesta de usuario
-		RespuestasG[0] = JOptionPane.showOptionDialog(null, "¿Cuál es el país más grande del mundo?",
-				"Preguntas de Geografía", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
-				new ImageIcon("src/principal/imagenes/Geografia1.png"),
-				new Object[] { "E.U.A", "México", "Rusia", "Brasil" }, "E.U.A"); // Respuesta correcta Rusia, 2
-
-		RespuestasG[1] = JOptionPane.showOptionDialog(null, "¿Cuántos países hay en el mundo?",
-				"Preguntas de Geografía", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
-				new ImageIcon("src/principal/imagenes/Geografia2.png"), new Object[] { "200", "195", "179", "198" },
-				"200"); // Respuesta correcta 195, 1
-
-		RespuestasG[2] = JOptionPane.showOptionDialog(null, "¿Cuál es la ciudad más poblada del mundo?",
-				"Preguntas de Geografía", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
-				new ImageIcon("src/principal/imagenes/Geografia3.png"),
-				new Object[] { "Japón", "Francia", "España", "Alemania" }, "Japón"); // Respuesta correcta Japón, 0
-
-		RespuestasG[3] = JOptionPane.showOptionDialog(null, "¿Cuál es el río más largo del mundo?",
-				"Preguntas de Geografía", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
-				new ImageIcon("src/principal/imagenes/Geografia4.png"),
-				new Object[] { "Río Bravo", "Río Volga", "Río Balsas", "Río Nilo" }, "Río Nilo"); // Respuesta correcta
-																									// Río Nilo, 3
-
-		RespuestasG[4] = JOptionPane.showOptionDialog(null,
-				"¿Qué país es el segundo más grande del mundo \nen términos de población?", "Preguntas de Geografía",
-				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
-				new ImageIcon("src/principal/imagenes/Geografia5.png"),
-				new Object[] { "China", "Rusia", "India", "Indonesia" }, "China"); // Respuesta correcta India, 2
+		int PreguntaRealizada[] = new int[totalP]; //Cambiar despues a int[PreguntasH.lenght] //PreguntaRealizada hasta 10 //Era antes [5]
+		int cont = 0;
+		encontrado = false;
+		
+		for (int i = 0; i < totalP; i++) { //Ciclo hasta 10 //Era antes [5]
+			
+			int Random = (int) Math.floor(Math.random() * PreguntasG.length); //Random hasta 20 //Era antes * 5
+			
+			if(i==0) {
+				PreguntaRealizada[cont] = Random;
+				RespuestasG[Random] = JOptionPane.showOptionDialog(null, PreguntasG[Random][0], "Preguntas de Geografía",
+						JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
+						new ImageIcon("src/paqueteDeProyecto/imagenes/Geografia" + Random +".png"),
+						new Object[] { PreguntasG[Random][1], PreguntasG[Random][2], PreguntasG[Random][3], PreguntasG[Random][4]},
+						PreguntasG[Random][1]);
+			}
+			else {
+				for(int j=0; j<cont; j++) {
+					if(PreguntaRealizada[j]==Random) {
+						encontrado = true;
+						break;
+					} 
+				}
+				
+				if(encontrado) {
+					i--;
+					cont--;
+					encontrado = false;
+				}else {
+					PreguntaRealizada[cont] = Random;
+					RespuestasG[Random] = JOptionPane.showOptionDialog(null, PreguntasG[Random][0], "Preguntas de Geografía",
+							JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
+							new ImageIcon("src/paqueteDeProyecto/imagenes/Geografia" + Random +".png"),
+							new Object[] { PreguntasG[Random][1], PreguntasG[Random][2], PreguntasG[Random][3], PreguntasG[Random][4]},
+							PreguntasG[Random][1]);
+				}
+			}
+			cont++;
+		}
 
 	}
 
