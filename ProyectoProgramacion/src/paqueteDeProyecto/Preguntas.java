@@ -67,12 +67,26 @@ public class Preguntas {
 		ResCorrectasH[18] = 1; //Respuesta correcta pregunta 19 Historia
 		ResCorrectasH[19] = 1; //Respuesta correcta pregunta 20 Historia
 	
-
 		ResCorrectasG[0] = 2;
 		ResCorrectasG[1] = 1;
 		ResCorrectasG[2] = 0;
 		ResCorrectasG[3] = 3;
 		ResCorrectasG[4] = 2;
+		ResCorrectasG[5] = 4;
+		ResCorrectasG[6] = 1;
+		ResCorrectasG[7] = 3;
+		ResCorrectasG[8] = 2;
+		ResCorrectasG[9] = 3;
+		ResCorrectasG[10] = 4;
+		ResCorrectasG[11] = 1;
+		ResCorrectasG[12] = 3;
+		ResCorrectasG[13] = 1;
+		ResCorrectasG[14] = 3;
+		ResCorrectasG[15] = 2;
+		ResCorrectasG[16] = 4;
+		ResCorrectasG[17] = 1;
+		ResCorrectasG[18] = 3;
+		ResCorrectasG[19] = 4;
 
 		ResCorrectasC[0] = 1;
 		ResCorrectasC[1] = 2;
