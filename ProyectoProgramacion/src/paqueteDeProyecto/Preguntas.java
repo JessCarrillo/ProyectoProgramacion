@@ -1,4 +1,4 @@
-/*Integrantes: HOLA HOLA 
+/*Integrantes:
 Rubiera Villareal Vanessa Estefania
 Carrillo Arellano Jesus David
 Aquino Chavez Luis Daniel
@@ -385,7 +385,7 @@ public class Preguntas {
 	public void añadirPreguntasyResCine() {
 
 		// Preguntas Cine
-		PreguntasC[0][0] = "¿Película que casi le da un infarto a su director Brad Bierd?";
+		PreguntasC[0][0] = "¿Película que casi le da un infarto a su director Brad Bird?";
 		PreguntasC[1][0] = "¿Palabra más conocida del Capitán América de Los Vengadores?";
 		PreguntasC[2][0] = "¿Cuál era la película con mas taquilla antes de ser Los Vengadores ENDGAME?";
 		PreguntasC[3][0] = "Película de Disney que tuvo un uso del 2D y 3D en toda la película: ";
@@ -697,7 +697,7 @@ public class Preguntas {
 		}
 	}
 
-	public void reiniciarVariables() { 
+	public void reiniciarVariables() {
 
 		// Metodo para reiniciar variables para cada vez que vuelva a jugar de nuevo el
 		// jugador
