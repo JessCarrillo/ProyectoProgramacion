@@ -264,8 +264,8 @@ public class Preguntas {
 		PreguntasG[15][0] =	"¿Cuál es la capital de China?";
 		PreguntasG[16][0] =	"¿En qué país se encuentra la Torre de Belém?";
 		PreguntasG[17][0] =	"¿Cuál es el país que tiene más pirámides en el mundo?";
-		PreguntasG[18][0] =	"";
-		PreguntasG[19][0] =	"";
+		PreguntasG[18][0] =	"¿Cuál es el único continente que tiene tierra en cada uno de los 4 hemisferios?";
+		PreguntasG[19][0] =	"¿En qué país puedes visitar el Machu Picchu?";
 
 		// Respuestas de Pregunta 1
 		PreguntasG[0][1] = "E.U.A";
@@ -296,12 +296,6 @@ public class Preguntas {
 		PreguntasG[4][2] = "Rusia";
 		PreguntasG[4][3] = "India"; //Res Correcta
 		PreguntasG[4][4] = "Indonesia"; 
-
-		// Respuestas de Pregunta 5
-		PreguntasG[5][1] = "Una ciudad \nislandesa"; 
-		PreguntasG[5][2] = "Un parque \ntemático";
-		PreguntasG[5][3] = "Un país del \nhemisferio norte"; 
-		PreguntasG[5][4] = "Un continente"; //Res Correcta
 		
 		// Respuestas de Pregunta 6
 		PreguntasG[5][1] = "Una ciudad \nislandesa"; 
@@ -380,6 +374,18 @@ public class Preguntas {
 		PreguntasG[17][2] = "Egipto"; 
 		PreguntasG[17][3] = "El Salvador"; 
 		PreguntasG[17][4] = "Palaos"; 
+		
+		// Respuestas de Pregunta 19
+		PreguntasG[18][1] = "Guatemala"; 
+		PreguntasG[18][2] = "México"; 
+		PreguntasG[18][3] = "Perú"; //Res Correcta
+		PreguntasG[18][4] = "Brasil"; 
+		
+		// Respuestas de Pregunta 20
+		PreguntasG[19][1] = "África"; 
+		PreguntasG[19][2] = "Europa"; 
+		PreguntasG[19][3] = "Oceanía"; 
+		PreguntasG[19][4] = "Asia"; //Res Correcta
 	}
 	
 	public void añadirPreguntasyResCine() {
