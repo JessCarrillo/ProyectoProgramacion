@@ -722,11 +722,11 @@ public class Preguntas {
 		if (RespuestasC[Random] == ResCorrectasC[Random]) {
 			contAcertadas = contAcertadas + 1;
 			puntos = puntos + 10;
-			JOptionPane.showMessageDialog(null, "", "Correcto!", JOptionPane.PLAIN_MESSAGE,
+			JOptionPane.showMessageDialog(null, "Correcto!", "Mensaje de respuesta", JOptionPane.PLAIN_MESSAGE,
 					new ImageIcon("src/paqueteDeProyecto/imagenes/correcto.png"));// Mensaje de respuesta correcta
 		}
 		else {
-			JOptionPane.showMessageDialog(null, "", "Incorrecto!", JOptionPane.PLAIN_MESSAGE,
+			JOptionPane.showMessageDialog(null, "Incorrecto!", "Mensaje de respuesta", JOptionPane.PLAIN_MESSAGE,
 					new ImageIcon("src/paqueteDeProyecto/imagenes/incorrecto.png"));// Mensaje de respuesta incorrecta
 		}
 	}
