@@ -556,8 +556,7 @@ public class Preguntas {
 		
 		for (int i = 0; i < totalP; i++) { //Ciclo para 
 			
-			Random = (int) Math.floor(Math.random() * PreguntasH.length); //Random hasta 20 //Era antes * 5
-			
+			Random = (int) Math.floor(Math.random() * PreguntasH.length); //Random hasta 20 
 			if(i==0) {
 				PreguntaRealizada[cont] = Random;
 				capturarRespuestasH();				
@@ -570,7 +569,6 @@ public class Preguntas {
 						break;
 					} 
 				}
-				
 				if(encontrado) {
 					i--;
 					cont--;
@@ -580,36 +578,23 @@ public class Preguntas {
 					capturarRespuestasH();	
 					revisarRespuestasH(); //Llamada a método para revisar respuestas de Preguntas de Historia
 				}
-			}
-			cont++;
+			} cont++;
 		}
-	}
-	
-	public void capturarRespuestasH() {
-		RespuestasH[Random] = JOptionPane.showOptionDialog(null, PreguntasH[Random][0], "Preguntas de Historia",
-				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
-				new ImageIcon("src/paqueteDeProyecto/imagenes/Historia" + Random +".png"),
-				new Object[] { PreguntasH[Random][1], PreguntasH[Random][2], PreguntasH[Random][3], PreguntasH[Random][4]},
-				PreguntasH[Random][1]);
 	}
 
 	public void desplegarPreguntasGeografia() {
 
-		int PreguntaRealizada[] = new int[totalP]; //Cambiar despues a int[PreguntasH.lenght] //PreguntaRealizada hasta 10 //Era antes [5]
+		int PreguntaRealizada[] = new int[totalP]; //Contiene el valor de totalP igual a 10, asignado al inicio de la clase
 		int cont = 0;
 		encontrado = false;
-		
-		for (int i = 0; i < totalP; i++) { //Ciclo hasta 10 //Era antes [5]
-			
-			int Random = (int) Math.floor(Math.random() * PreguntasG.length); //Random hasta 20 //Era antes * 5
-			
+
+		for (int i = 0; i < totalP; i++) { //Ciclo para 
+
+			Random = (int) Math.floor(Math.random() * PreguntasG.length); //Random hasta 20 
 			if(i==0) {
 				PreguntaRealizada[cont] = Random;
-				RespuestasG[Random] = JOptionPane.showOptionDialog(null, PreguntasG[Random][0], "Preguntas de Geografía",
-						JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
-						new ImageIcon("src/paqueteDeProyecto/imagenes/Geografia" + Random +".png"),
-						new Object[] { PreguntasG[Random][1], PreguntasG[Random][2], PreguntasG[Random][3], PreguntasG[Random][4]},
-						PreguntasG[Random][1]);
+				capturarRespuestasG();				
+				revisarRespuestasG(); //Llamada a método para revisar respuestas de Preguntas de Geografía
 			}
 			else {
 				for(int j=0; j<cont; j++) {
@@ -618,126 +603,120 @@ public class Preguntas {
 						break;
 					} 
 				}
-				
 				if(encontrado) {
 					i--;
 					cont--;
 					encontrado = false;
 				}else {
 					PreguntaRealizada[cont] = Random;
-					RespuestasG[Random] = JOptionPane.showOptionDialog(null, PreguntasG[Random][0], "Preguntas de Geografía",
-							JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
-							new ImageIcon("src/paqueteDeProyecto/imagenes/Geografia" + Random +".png"),
-							new Object[] { PreguntasG[Random][1], PreguntasG[Random][2], PreguntasG[Random][3], PreguntasG[Random][4]},
-							PreguntasG[Random][1]);
+					capturarRespuestasG();	
+					revisarRespuestasG(); //Llamada a método para revisar respuestas de Preguntas de Geografía
 				}
-			}
-			cont++;
+			} cont++;
 		}
-
 	}
-
+	
 	public void desplegarPreguntasCine() {
+		
+		int PreguntaRealizada[] = new int[totalP]; //Contiene el valor de totalP igual a 10, asignado al inicio de la clase
+		int cont = 0;
+		encontrado = false;
 
-		RespuestasC[0] = JOptionPane.showOptionDialog(null,
-				"¿Película que casi le da un infarto a su director Brad Bierd?", "Preguntas de Cine",
-				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
-				new ImageIcon("src/principal/imagenes/Cine1.png"),
-				new Object[] { "El gigante de Acero", "Los increíbles", "Ratatoille", "Los Increíbles 2" },
-				"El gigante de Acero"); // Correcta respuesta El gigante de Acero 0
+		for (int i = 0; i < totalP; i++) { //Ciclo para 
 
-		RespuestasC[1] = JOptionPane.showOptionDialog(null,
-				"¿Palabra más conocida del Capitán América de Los Vengadores?", "Preguntas de Cine",
-				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
-				new ImageIcon("src/principal/imagenes/Cine2.png"), new Object[] { "Si entendí la referencia",
-						"¿alguien quiere retirarse?", "Vengadores! Unidos!", "Puedo hacer esto todo el día" },
-				"Si entendí la referencia"); // Respuesta correcta Vengadores Unidos!, 2
-
-		RespuestasC[2] = JOptionPane.showOptionDialog(null,
-				"¿Cuál era la película con mas taquilla antes de ser Los Vengadores ENDGAME?", "Preguntas de Cine",
-				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
-				new ImageIcon("src/principal/imagenes/Cine3.png"),
-				new Object[] { "Avatar", "La cenicienta", "Ready player one", "Juego de tronos" }, "Avatar"); // Respuesta
-																												// correcta
-																												// Avatar,
-																												// 0
-
-		RespuestasC[3] = JOptionPane.showOptionDialog(null,
-				"Película de Disney que tuvo un uso del 2D y 3D en toda la película: ", "Preguntas de Cine",
-				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
-				new ImageIcon("src/principal/imagenes/Cine4.png"),
-				new Object[] { "Atlantis", "El planeta del tesoro", "Mosters Inc.", "Toys Story" }, "Atlantis"); // Respuesta
-																													// correcta
-																													// El
-																													// planeta
-																													// del
-																													// tesoro,
-																													// 1
-
-		RespuestasC[4] = JOptionPane.showOptionDialog(null, "Película de DC que se volvió a estrenar en el año 2021: ",
-				"Preguntas de Cine", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
-				new ImageIcon("src/principal/imagenes/Cine5.png"),
-				new Object[] { "Batman Vs Superman", "Aquaman", "Wonder women 1884", "Justice league, sycniders cut" },
-				"Batman Vs Superman"); // Respuesta correcta Justice league, sycniders cut, 3
-
+			Random = (int) Math.floor(Math.random() * PreguntasC.length); //Random hasta 20 
+			if(i==0) {
+				PreguntaRealizada[cont] = Random;
+				capturarRespuestasC();				
+				revisarRespuestasC(); //Llamada a método para revisar respuestas de Preguntas de Cine
+			}
+			else {
+				for(int j=0; j<cont; j++) {
+					if(PreguntaRealizada[j]==Random) {
+						encontrado = true;
+						break;
+					} 
+				}
+				if(encontrado) {
+					i--; 
+					cont--;
+					encontrado = false;
+				}else {
+					PreguntaRealizada[cont] = Random;
+					capturarRespuestasC();	
+					revisarRespuestasC(); //Llamada a método para revisar respuestas de Preguntas de Cine
+				}
+			} cont++;
+		}
 	}
 
-	public void revisarRespuestasH() {
-		
-		tituloDR = "Puntaje de Historia"; 
+	public void capturarRespuestasH() {
+		RespuestasH[Random] = JOptionPane.showOptionDialog(null, PreguntasH[Random][0], "Preguntas de Historia",
+				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
+				new ImageIcon("src/paqueteDeProyecto/imagenes/Historia" + Random +".png"),
+				new Object[] { PreguntasH[Random][1], PreguntasH[Random][2], PreguntasH[Random][3], PreguntasH[Random][4]},
+				PreguntasH[Random][1]);
+	}
+	
+	public void capturarRespuestasG() {
+		RespuestasG[Random] = JOptionPane.showOptionDialog(null, PreguntasG[Random][0], "Preguntas de Geografía",
+				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
+				new ImageIcon("src/paqueteDeProyecto/imagenes/Geografia" + Random +".png"),
+				new Object[] { PreguntasG[Random][1], PreguntasG[Random][2], PreguntasG[Random][3], PreguntasG[Random][4]},
+				PreguntasG[Random][1]);
+	}
+	
+	public void capturarRespuestasC() {
+		RespuestasC[Random] = JOptionPane.showOptionDialog(null, PreguntasC[Random][0], "Preguntas de Cine",
+				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
+				new ImageIcon("src/paqueteDeProyecto/imagenes/Cine" + Random +".png"),
+				new Object[] { PreguntasC[Random][1], PreguntasC[Random][2], PreguntasC[Random][3], PreguntasC[Random][4]},
+				PreguntasC[Random][1]);
+	}
 
-			if (RespuestasH[Random] == ResCorrectasH[Random]) {
-				contAcertadas = contAcertadas + 1;
-				puntos = puntos + 10;
-			}
+	
+	public void revisarRespuestasH() {
+		tituloDR = "Puntaje de Historia"; 
+		
+		// Secuencia condicional para verificar si la respuesta que selecciono el usuario al pulsar
+		// el boton es igual a la respuesta del arreglo de respuestas de Historia
+		if (RespuestasH[Random] == ResCorrectasH[Random]) {
+			contAcertadas = contAcertadas + 1;
+			puntos = puntos + 10;
+		}
 	}
 
 	public void revisarRespuestasG() {
-
 		tituloDR = "Puntaje de Georgrafía";
-
-		// Ciclo for para verificar si la respuesta que selecciono el usuario al pulsar
+		
+		// Secuencia condicional para verificar si la respuesta que selecciono el usuario al pulsar
 		// el boton es igual a la respuesta del arreglo de respuestas de Geografia
-		for (int cont = 0; cont <= 4; cont++) {
-
-			if (RespuestasG[cont] == ResCorrectasG[cont]) {
-				contAcertadas = contAcertadas + 1;
-				puntos = puntos + 10;
-			}
+		if (RespuestasG[Random] == ResCorrectasG[Random]) {
+			contAcertadas = contAcertadas + 1;
+			puntos = puntos + 10;
 		}
 	}
 
 	public void revisarRespuestasC() {
-
 		tituloDR = "Puntaje de Cine";
 
-		// Ciclo for para verificar si la respuesta que selecciono el usuario al pulsar
+		// Secuencia condicional para verificar si la respuesta que selecciono el usuario al pulsar
 		// el boton es igual a la respuesta del arreglo de respuestas de Cine
-
-		for (int cont = 0; cont <= 4; cont++) {
-
-			if (RespuestasC[cont] == ResCorrectasC[cont]) {
-				contAcertadas = contAcertadas + 1;
-				puntos = puntos + 10;
-			}
+		if (RespuestasC[Random] == ResCorrectasC[Random]) {
+			contAcertadas = contAcertadas + 1;
+			puntos = puntos + 10;
 		}
 	}
 
-	public void reiniciarVariables() {
-
-		// Metodo para reiniciar variables para cada vez que vuelva a jugar de nuevo el
-		// jugador
+	public void reiniciarVariables() { // Método para reiniciar variables para cada vez que vuelva a jugar de nuevo el jugador
 		contAcertadas = 0;
 		puntos = 0;
-
 	}
 
 	public void desplegarResultado() {
-
 		JOptionPane.showMessageDialog(null,
 				nombre + " acertaste " + contAcertadas + " preguntas" + "\nTienes un total de " + puntos + " puntos",
 				tituloDR, JOptionPane.PLAIN_MESSAGE, new ImageIcon("src/principal/imagenes/resultado.png"));
-
 	}
 
 }
