@@ -578,7 +578,8 @@ public class Preguntas {
 					capturarRespuestasH();	
 					revisarRespuestasH(); //Llamada a método para revisar respuestas de Preguntas de Historia
 				}
-			} cont++;
+			} 
+			cont++;
 		}
 	}
 
@@ -612,7 +613,8 @@ public class Preguntas {
 					capturarRespuestasG();	
 					revisarRespuestasG(); //Llamada a método para revisar respuestas de Preguntas de Geografía
 				}
-			} cont++;
+			} 
+			cont++;
 		}
 	}
 	
@@ -646,7 +648,8 @@ public class Preguntas {
 					capturarRespuestasC();	
 					revisarRespuestasC(); //Llamada a método para revisar respuestas de Preguntas de Cine
 				}
-			} cont++;
+			} 
+			cont++;
 		}
 	}
 
