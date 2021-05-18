@@ -686,6 +686,13 @@ public class Preguntas {
 		if (RespuestasH[Random] == ResCorrectasH[Random]) {
 			contAcertadas = contAcertadas + 1;
 			puntos = puntos + 10;
+			
+			JOptionPane.showMessageDialog(null, "", "Correcto!", JOptionPane.PLAIN_MESSAGE,
+					new ImageIcon("src/paqueteDeProyecto/imagenes/correcto.png"));// Mensaje de respuesta correcta
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "", "Incorrecto!", JOptionPane.PLAIN_MESSAGE,
+					new ImageIcon("src/paqueteDeProyecto/imagenes/incorrecto.png"));// Mensaje de respuesta incorrecta
 		}
 	}
 
@@ -697,6 +704,13 @@ public class Preguntas {
 		if (RespuestasG[Random] == ResCorrectasG[Random]) {
 			contAcertadas = contAcertadas + 1;
 			puntos = puntos + 10;
+		
+			JOptionPane.showMessageDialog(null, "", "Correcto!", JOptionPane.PLAIN_MESSAGE,
+					new ImageIcon("src/paqueteDeProyecto/imagenes/correcto.png"));// Mensaje de respuesta correcta
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "", "Incorrecto!", JOptionPane.PLAIN_MESSAGE,
+					new ImageIcon("src/paqueteDeProyecto/imagenes/incorrecto.png"));// Mensaje de respuesta incorrecta
 		}
 	}
 
@@ -708,8 +722,15 @@ public class Preguntas {
 		if (RespuestasC[Random] == ResCorrectasC[Random]) {
 			contAcertadas = contAcertadas + 1;
 			puntos = puntos + 10;
+			JOptionPane.showMessageDialog(null, "", "Correcto!", JOptionPane.PLAIN_MESSAGE,
+					new ImageIcon("src/paqueteDeProyecto/imagenes/correcto.png"));// Mensaje de respuesta correcta
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "", "Incorrecto!", JOptionPane.PLAIN_MESSAGE,
+					new ImageIcon("src/paqueteDeProyecto/imagenes/incorrecto.png"));// Mensaje de respuesta incorrecta
 		}
 	}
+
 
 	public void reiniciarVariables() { // Método para reiniciar variables para cada vez que vuelva a jugar de nuevo el jugador
 		contAcertadas = 0;
