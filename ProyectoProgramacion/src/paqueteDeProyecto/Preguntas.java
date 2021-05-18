@@ -550,24 +550,18 @@ public class Preguntas {
 
 	public void desplegarPreguntasHistoria() {
 		
-		int PreguntaRealizada[] = new int[totalP]; //Cambiar despues a int[PreguntasH.lenght] //PreguntaRealizada hasta 10 //Era antes [5]
+		int PreguntaRealizada[] = new int[totalP]; //Contiene el valor de totalP igual a 10, asignado al inicio de la clase
 		int cont = 0;
 		encontrado = false;
 		
-		for (int i = 0; i < totalP; i++) { //Ciclo hasta 10 //Era antes [5]
+		for (int i = 0; i < totalP; i++) { //Ciclo para 
 			
 			Random = (int) Math.floor(Math.random() * PreguntasH.length); //Random hasta 20 //Era antes * 5
 			
 			if(i==0) {
 				PreguntaRealizada[cont] = Random;
-				RespuestasH[Random] = JOptionPane.showOptionDialog(null, PreguntasH[Random][0], "Preguntas de Historia",
-						JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
-						new ImageIcon("src/paqueteDeProyecto/imagenes/Historia" + Random +".png"),
-						new Object[] { PreguntasH[Random][1], PreguntasH[Random][2], PreguntasH[Random][3], PreguntasH[Random][4]},
-						PreguntasH[Random][1]);
-				
-				//revisar respuestas de Preguntas de Historia
-				revisarRespuestasH();
+				capturarRespuestasH();				
+				revisarRespuestasH(); //Llamada a método para revisar respuestas de Preguntas de Historia
 			}
 			else {
 				for(int j=0; j<cont; j++) {
@@ -583,19 +577,20 @@ public class Preguntas {
 					encontrado = false;
 				}else {
 					PreguntaRealizada[cont] = Random;
-					RespuestasH[Random] = JOptionPane.showOptionDialog(null, PreguntasH[Random][0], "Preguntas de Historia",
-							JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
-							new ImageIcon("src/paqueteDeProyecto/imagenes/Historia" + Random +".png"),
-							new Object[] { PreguntasH[Random][1], PreguntasH[Random][2], PreguntasH[Random][3], PreguntasH[Random][4]},
-							PreguntasH[Random][1]);
-					
-					//revisar respuestas de Preguntas de Historia
-					revisarRespuestasH();
+					capturarRespuestasH();	
+					revisarRespuestasH(); //Llamada a método para revisar respuestas de Preguntas de Historia
 				}
 			}
 			cont++;
 		}
-
+	}
+	
+	public void capturarRespuestasH() {
+		RespuestasH[Random] = JOptionPane.showOptionDialog(null, PreguntasH[Random][0], "Preguntas de Historia",
+				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
+				new ImageIcon("src/paqueteDeProyecto/imagenes/Historia" + Random +".png"),
+				new Object[] { PreguntasH[Random][1], PreguntasH[Random][2], PreguntasH[Random][3], PreguntasH[Random][4]},
+				PreguntasH[Random][1]);
 	}
 
 	public void desplegarPreguntasGeografia() {
