@@ -56,8 +56,23 @@ public class Interfaz {
 				break;
 			}
 			
-			res = Integer.parseInt(JOptionPane.showInputDialog(null, "¿Quiere volver a jugar? \n1)Si \n2)No",
-					"Pregunta para volver a jugar", JOptionPane.PLAIN_MESSAGE));
+			Boolean Condicion;
+
+			Condicion = true;
+
+			do {
+
+				try {
+					res = Integer.parseInt(JOptionPane.showInputDialog(null, "¿Quiere volver a jugar? \n1)Si \n2)No",
+							"Pregunta para volver a jugar", JOptionPane.PLAIN_MESSAGE));
+					Condicion = false;
+				} catch (Exception a) {
+					JOptionPane.showMessageDialog(null, "Ingresa un digito valido (1 o 2)", "ERROR",
+							JOptionPane.ERROR_MESSAGE);
+					Condicion = true;
+				}
+
+			} while (Condicion);
 			
 			Question.reiniciarVariables(); //Reiniciar contador de preguntas correctas y acumulador de puntos para cada nuevo juego del usuario con respecto a la elección de tema
 
