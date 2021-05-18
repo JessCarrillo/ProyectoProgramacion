@@ -5,7 +5,6 @@ Aquino Chavez Luis Daniel
 Ramirez Medina Aaron
 Grupo 332 */
 
-
 package paqueteDeProyecto;
 
 import javax.swing.ImageIcon;
@@ -27,21 +26,26 @@ public class Interfaz {
 		int opc = 0;
 		int res = 0;
 
-		//Llamada a metodo para inicializar areglos con las preguntas y respuestas del Quizz
+		// Llamada a metodo para inicializar areglos con las preguntas y respuestas del
+		// Quizz
 		Question.añadirPreguntasYRespuestas();
-		Question.nombre = (String) JOptionPane.showInputDialog(null,"Ingresa tu nombre: ","Nombre Jugador",JOptionPane.PLAIN_MESSAGE, new ImageIcon("src/principal/imagenes/nombre.png"),null,null);
+		Question.nombre = (String) JOptionPane.showInputDialog(null, "Ingresa tu nombre: ", "Nombre Jugador",
+				JOptionPane.PLAIN_MESSAGE, new ImageIcon("src/principal/imagenes/nombre.png"), null, null);
 
-		//Ciclo para repetir la selección de temas 
+		// Ciclo para repetir la selección de temas
 		do {
-			
+
 			opc = JOptionPane.showOptionDialog(null, "Seleccione el tema de las preguntas:", "Selección de tema",
 					JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null,
 					new Object[] { "Historia", "Geografía", "Cine" }, "Historia");
 
+			// en base al tema seleccionado por el usuario se ejecuta su correspondiente
+			// switch, haciendo la llamada a los metodos correspondientes del tema
+			// seleccionado por el usuario
 			switch (opc) {
 			case 0:
 				Question.desplegarPreguntasHistoria();
-				//Question.revisarRespuestasH();
+				// Question.revisarRespuestasH();
 				Question.desplegarResultado();
 				break;
 			case 1:
@@ -55,7 +59,10 @@ public class Interfaz {
 				Question.desplegarResultado();
 				break;
 			}
-			
+
+			// Se muestra un mensaje para seleccionar si se desea continuar o si se quiere
+			// cerrar el programa, se verifica los datos ingresados, de no ser un 1 o 2 se
+			// seguira mostrando el cuadro de seleccion
 			Boolean Condicion;
 
 			Condicion = true;
@@ -73,10 +80,11 @@ public class Interfaz {
 				}
 
 			} while (Condicion);
-			
-			Question.reiniciarVariables(); //Reiniciar contador de preguntas correctas y acumulador de puntos para cada nuevo juego del usuario con respecto a la elección de tema
 
-		} while (res != 2); //El ciclo se repite hasta que el usuario no ingrese 2
+			Question.reiniciarVariables(); // Reiniciar contador de preguntas correctas y acumulador de puntos para cada
+											// nuevo juego del usuario con respecto a la elección de tema
+
+		} while (res != 2); // El ciclo se repite hasta que el usuario no ingrese 2
 
 	}
 
