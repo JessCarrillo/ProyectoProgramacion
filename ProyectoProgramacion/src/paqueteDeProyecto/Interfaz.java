@@ -61,7 +61,7 @@ public class Interfaz {
 			
 			Question.reiniciarVariables(); //Reiniciar contador de preguntas correctas y acumulador de puntos para cada nuevo juego del usuario con respecto a la elección de tema
 
-		} while (res != 2); //EL ciclo se repite hasta que el usuario no ingrese 2
+		} while (res != 2); //El ciclo se repite hasta que el usuario no ingrese 2
 
 	}
 

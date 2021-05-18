@@ -550,7 +550,6 @@ public class Preguntas {
 
 	public void desplegarPreguntasHistoria() {
 		
-		tituloDR = "Puntaje de Historia"; 
 		int PreguntaRealizada[] = new int[totalP]; //Cambiar despues a int[PreguntasH.lenght] //PreguntaRealizada hasta 10 //Era antes [5]
 		int cont = 0;
 		encontrado = false;
@@ -589,6 +588,9 @@ public class Preguntas {
 							new ImageIcon("src/paqueteDeProyecto/imagenes/Historia" + Random +".png"),
 							new Object[] { PreguntasH[Random][1], PreguntasH[Random][2], PreguntasH[Random][3], PreguntasH[Random][4]},
 							PreguntasH[Random][1]);
+					
+					//revisar respuestas de Preguntas de Historia
+					revisarRespuestasH();
 				}
 			}
 			cont++;
@@ -686,6 +688,8 @@ public class Preguntas {
 	}
 
 	public void revisarRespuestasH() {
+		
+		tituloDR = "Puntaje de Historia"; 
 
 			if (RespuestasH[Random] == ResCorrectasH[Random]) {
 				contAcertadas = contAcertadas + 1;
