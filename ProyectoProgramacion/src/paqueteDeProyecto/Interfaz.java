@@ -31,7 +31,7 @@ public class Interfaz {
 		do { //Ciclo para repetir todo el programa
 			
 			opc = JOptionPane.showOptionDialog(null, "", "Bienvenido", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE,
-					new ImageIcon("src/paqueteDeProyecto/imagenes/Tema.png"), new Object[] { "Jugar", "Salir" }, "Jugar");
+					new ImageIcon("src/paqueteDeProyecto/imagenes/Tema.png"), new Object[] { "Jugar", "Ver puntajes", "Salir" }, "Jugar");
 
 			if(opc==0) {
 				
@@ -43,13 +43,39 @@ public class Interfaz {
 						new ImageIcon("src/paqueteDeProyecto/imagenes/byebye.gif"));// Mensaje de despedida de un usuario
 			}
 			else if(opc==1) {
+				menuVerPuntajes();
+			}
+			else if(opc==2) {
 				// Mensaje de despedida de fin del programa
 				JOptionPane.showMessageDialog(null, "Gracias por utilizar nuestro programa, \nel programa se cerrará, bye bye!", 
 						"Salida del programa", JOptionPane.PLAIN_MESSAGE, new ImageIcon("src/paqueteDeProyecto/imagenes/despedidaFinal2.gif"));
 			}
 			
-		}while(opc==0);//Se sale del ciclo hasta que el usuario deja de presionar a la opción de Jugar
+		}while(opc==0 || opc==1);//Se repite el ciclo si el usuario presiona Jugar o Ver puntajes
 			
+	}
+	
+	public void menuVerPuntajes() {
+		
+		int opc = 0;
+		
+		opc = JOptionPane.showOptionDialog(null, "Seleccione el tema para ver historial de puntajes:", "Selección de tema historial de puntajes",
+				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null,
+				new Object[] { "Historia", "Geografía", "Cine" }, "Historia");
+		
+		// en base al tema seleccionado por el usuario se ejecuta su correspondiente switch, haciendo la llamada a los metodos correspondientes del tema
+		// seleccionado por el usuario
+		switch (opc) {
+		case 0:
+			Question.verPuntajesH();
+			break;
+		case 1:
+			Question.verPuntajesG();
+			break;
+		case 2:
+			Question.verPuntajesC();
+			break;
+		}
 	}
 	
 	public void ingresarNombre() {
@@ -78,6 +104,8 @@ public class Interfaz {
 					opc = JOptionPane.showOptionDialog(null, "Seleccione el tema de las preguntas:", "Selección de tema",
 							JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null,
 							new Object[] { "Historia", "Geografía", "Cine" }, "Historia");
+					
+					Question.opc = opc; //Enviar valor opc a clase Question
 
 					// en base al tema seleccionado por el usuario se ejecuta su correspondiente
 					// switch, haciendo la llamada a los metodos correspondientes del tema
@@ -94,6 +122,7 @@ public class Interfaz {
 						break;
 					}
 					
+					Question.almacenarPuntajes();
 					Question.desplegarResultado();
 					preguntaVolverJugar();
 					Question.reiniciarVariables(); // Reiniciar contador de preguntas correctas y acumulador de puntos para cada nuevo juego del usuario con respecto a la elección de tema

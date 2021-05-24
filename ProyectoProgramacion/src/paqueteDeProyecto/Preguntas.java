@@ -25,16 +25,21 @@ public class Preguntas {
 	int ResCorrectasG[] = new int[20];
 	int ResCorrectasC[] = new int[20];
 	
+	String puntajesH[][] = new String[10][2];
+	String puntajesG[][] = new String[10][2];
+	String puntajesC[][] = new String[10][2];
+			
 	int Random = 0;
 	int res = 0;
 	int contAcertadas = 0;
 	int puntos = 0;
+	int juegoH = -1, juegoG = -1, juegoC = -1;
+	int opc = 0;
 	String tituloDR = "";
 
 	String nombre = "";
 	boolean encontrado;
 	int totalP = (PreguntasH.length/2); //Variable para el total de preguntas a desplegar
-	//String nombreArreglo;
 
 	public void añadirPreguntasYRespuestas() {
 
@@ -550,6 +555,7 @@ public class Preguntas {
 
 	public void desplegarPreguntasHistoria() {
 		
+		juegoH++; //Se aumenta contador de juegoH para contar los juegos del tema Historia
 		int PreguntaRealizada[] = new int[totalP]; //Contiene el valor de totalP igual a 10, asignado al inicio de la clase
 		int cont = 0;
 		encontrado = false;
@@ -584,7 +590,8 @@ public class Preguntas {
 	}
 
 	public void desplegarPreguntasGeografia() {
-
+		
+		juegoG++; //Se aumenta contador de juegoG para contar los juegos del tema Geografia
 		int PreguntaRealizada[] = new int[totalP]; //Contiene el valor de totalP igual a 10, asignado al inicio de la clase
 		int cont = 0;
 		encontrado = false;
@@ -620,6 +627,7 @@ public class Preguntas {
 	
 	public void desplegarPreguntasCine() {
 		
+		juegoC++; //Se aumenta contador de juegoC para contar los juegos del tema Cine		
 		int PreguntaRealizada[] = new int[totalP]; //Contiene el valor de totalP igual a 10, asignado al inicio de la clase
 		int cont = 0;
 		encontrado = false;
@@ -756,4 +764,193 @@ public class Preguntas {
 		}
 		
 	}
+	
+	public void almacenarPuntajes() {
+	
+		switch(opc) {
+		case 0:
+			if(juegoH<10) {
+				puntajesH[juegoH][0] = nombre;
+				puntajesH[juegoH][1] = Integer.toString(puntos);
+			}
+			else { //Mandar mensaje de limite de puntajes alcanzado
+				juegoH = 9;
+			}
+			break;
+		case 1:
+			if(juegoG<10) {
+				puntajesG[juegoG][0] = nombre;
+				puntajesG[juegoG][1] = Integer.toString(puntos);
+			}
+			else {
+				//Mandar mensaje de limite de puntajes alcanzado
+				juegoG = 9;
+			}
+			break;
+		case 2:
+			if(juegoC<10) {
+				puntajesC[juegoC][0] = nombre;
+				puntajesC[juegoC][1] = Integer.toString(puntos);
+			}
+			else {
+				//Mandar mensaje de limite de puntajes alcanzado
+				juegoC = 9;
+			}
+			break;
+		}
+	}
+	
+	public void verPuntajesH() {
+		
+		if(juegoH>0) { //Si hay más de una partida en el tema de historia
+			int pasadas;
+			String puntajesA[][] = puntajesH.clone(); //Se clona el arreglo puntajesH en arreglo puntajesA
+
+			for(pasadas=0; pasadas<=juegoH; pasadas++) { //Se ordena el arreglo puntajesA
+
+				for(int i=0; i<=juegoH-pasadas; i++) {
+					if(puntajesA[i+1][1] != null) { //Si el siguiente valor en el arreglo en la posicion i es diferente de null
+						if (Integer.parseInt(puntajesA[i][1]) >  Integer.parseInt(puntajesA[i+1][1])) { 
+							String temp = puntajesA[i][0]; 
+							String temp2 = puntajesA[i][1];
+							
+							puntajesA[i][0] = puntajesA[i+1][0];
+							puntajesA[i][1] = puntajesA[i+1][1];
+							
+							puntajesA[i+1][0] = temp;
+							puntajesA[i+1][1] = temp2;
+						} 
+					}
+				}
+			}
+			
+			String desplegar = "";
+			
+			for(int i=juegoH; i>=0; i--) { //Guardar valores ordenados de puntajes almacenados en arreglo puntajesA, en la variable desplegar
+
+				desplegar = desplegar + puntajesA[i][0] + " | " + puntajesA[i][1] + "\n";
+			}
+			
+			//Se muestran los valores ordenados del puntaje
+			JOptionPane.showMessageDialog(null, "El historial de puntajes (ordenados de mayor a menor) en el tema de historia \nes el siguiente:\n" 
+					+ desplegar, "Historial Puntajes Historia", JOptionPane.PLAIN_MESSAGE, null);
+		}else if(juegoH==0){
+			
+			String desplegar = "";
+			desplegar = desplegar + puntajesH[0][0] + " | " + puntajesH[0][1];
+			
+			//Se muestra el unico puntaje almacenado
+			JOptionPane.showMessageDialog(null, "El historial de puntajes (ordenados de mayor a menor) en el tema de historia \nes el siguiente:\n" 
+					+ desplegar, "Historial Puntajes Historia", JOptionPane.PLAIN_MESSAGE, null);
+		}
+		else {
+			
+			//Se muestra mensaje de que no hay valores
+			JOptionPane.showMessageDialog(null, "Lo sentimos, todavía no hay ningun puntaje guardado" 
+					, "Historial Puntajes Historia", JOptionPane.WARNING_MESSAGE, null);
+		}		
+	}
+	
+	public void verPuntajesG() {
+
+		if(juegoG>0) { //Si hay más de una partida en el tema de geografia
+			int pasadas;
+			String puntajesA[][] = puntajesG.clone(); //Se clona el arreglo puntajesH en arreglo puntajesA
+
+			for(pasadas=0; pasadas<=juegoG; pasadas++) { //Se ordena el arreglo puntajesA
+
+				for(int i=0; i<=juegoG-pasadas; i++) {
+					if(puntajesA[i+1][1] != null) { //Si el siguiente valor en el arreglo en la posicion i es diferente de null
+						if (Integer.parseInt(puntajesA[i][1]) >  Integer.parseInt(puntajesA[i+1][1])) { 
+							String temp = puntajesA[i][0]; 
+							String temp2 = puntajesA[i][1];
+							
+							puntajesA[i][0] = puntajesA[i+1][0];
+							puntajesA[i][1] = puntajesA[i+1][1];
+							
+							puntajesA[i+1][0] = temp;
+							puntajesA[i+1][1] = temp2;
+						} 
+					}
+				}
+			}
+			
+			String desplegar = "";
+			
+			for(int i=juegoG; i>=0; i--) { //Guardar valores ordenados de puntajes almacenados en arreglo puntajesA, en la variable desplegar
+
+				desplegar = desplegar + puntajesA[i][0] + " | " + puntajesA[i][1] + "\n";
+			}
+			
+			//Se muestran los valores ordenados del puntaje
+			JOptionPane.showMessageDialog(null, "El historial de puntajes (ordenados de mayor a menor) en el tema de geografia \nes el siguiente:\n" 
+					+ desplegar, "Historial Puntajes Geografia", JOptionPane.PLAIN_MESSAGE, null);
+		}else if(juegoG==0){
+
+			String desplegar = "";
+			desplegar = desplegar + puntajesG[0][0] + " | " + puntajesG[0][1];
+
+			//Se muestra el unico puntaje almacenado
+			JOptionPane.showMessageDialog(null, "El historial de puntajes (ordenados de mayor a menor) en el tema de geografia \nes el siguiente:\n" 
+					+ desplegar, "Historial Puntajes Geografia", JOptionPane.PLAIN_MESSAGE, null);
+		}
+		else {
+
+			//Se muestra mensaje de que no hay valores
+			JOptionPane.showMessageDialog(null, "Lo sentimos, todavía no hay ningun puntaje guardado" 
+					, "Historial Puntajes Geografia", JOptionPane.WARNING_MESSAGE, null);
+		}	
+	}
+	
+	public void verPuntajesC() {
+		
+		if(juegoC>0) { //Si hay más de una partida en el tema de geografia
+			int pasadas;
+			String puntajesA[][] = puntajesC.clone(); //Se clona el arreglo puntajesH en arreglo puntajesA
+
+			for(pasadas=0; pasadas<=juegoC; pasadas++) { //Se ordena el arreglo puntajesA
+
+				for(int i=0; i<=juegoC-pasadas; i++) {
+					if(puntajesA[i+1][1] != null) { //Si el siguiente valor en el arreglo en la posicion i es diferente de null
+						if (Integer.parseInt(puntajesA[i][1]) >  Integer.parseInt(puntajesA[i+1][1])) { 
+							String temp = puntajesA[i][0]; 
+							String temp2 = puntajesA[i][1];
+							
+							puntajesA[i][0] = puntajesA[i+1][0];
+							puntajesA[i][1] = puntajesA[i+1][1];
+							
+							puntajesA[i+1][0] = temp;
+							puntajesA[i+1][1] = temp2;
+						} 
+					}
+				}
+			}
+			
+			String desplegar = "";
+			
+			for(int i=juegoC; i>=0; i--) { //Guardar valores ordenados de puntajes almacenados en arreglo puntajesA, en la variable desplegar
+
+				desplegar = desplegar + puntajesA[i][0] + " | " + puntajesA[i][1] + "\n";
+			}
+			
+			//Se muestran los valores ordenados del puntaje
+			JOptionPane.showMessageDialog(null, "El historial de puntajes (ordenados de mayor a menor) en el tema de cine \nes el siguiente:\n" 
+					+ desplegar, "Historial Puntajes Cine", JOptionPane.PLAIN_MESSAGE, null);
+		}else if(juegoC==0){
+	
+			String desplegar = "";
+			desplegar = desplegar + puntajesC[0][0] + " | " + puntajesC[0][1];
+	
+			//Se muestra el unico puntaje almacenado
+			JOptionPane.showMessageDialog(null, "El historial de puntajes (ordenados de mayor a menor) en el tema de cine \nes el siguiente:\n" 
+					+ desplegar, "Historial Puntajes Cine", JOptionPane.PLAIN_MESSAGE, null);
+		}
+		else {
+			//Se muestra mensaje de que no hay valores
+			JOptionPane.showMessageDialog(null, "Lo sentimos, todavía no hay ningun puntaje guardado" 
+					, "Historial Puntajes Cine", JOptionPane.WARNING_MESSAGE, null);
+		}
+	}
 }
+
+
