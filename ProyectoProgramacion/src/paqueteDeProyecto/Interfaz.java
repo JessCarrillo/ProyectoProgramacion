@@ -15,6 +15,7 @@ public class Interfaz {
 	Preguntas Question = new Preguntas();
 	int opc = 0;
 	int res = 0;
+	boolean salir = false;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -33,11 +34,9 @@ public class Interfaz {
 					new ImageIcon("src/paqueteDeProyecto/imagenes/Tema.png"), new Object[] { "Jugar", "Salir" }, "Jugar");
 
 			if(opc==0) {
-				//Llamada a método para inicializar areglos con las preguntas y respuestas del Quizz
-				Question.añadirPreguntasYRespuestas();
-				Question.nombre = (String) JOptionPane.showInputDialog(null, "Ingresa tu nombre: ", "Nombre Jugador",
-						JOptionPane.PLAIN_MESSAGE, new ImageIcon("src/paqueteDeProyecto/imagenes/nombre.png"), null, null);
-
+				
+				Question.añadirPreguntasYRespuestas();//Llamada a método para inicializar arreglos con las preguntas y respuestas del Quizz
+				ingresarNombre();
 				menuOpciones();//Llamada a metodo para seleccionar el tema de las preguntas y ejecutar sus metodos
 				
 				JOptionPane.showMessageDialog(null, "Hasta luego " + Question.nombre + "... \nGracias por jugar!", "Mensaje de despedida", JOptionPane.PLAIN_MESSAGE,
@@ -51,6 +50,24 @@ public class Interfaz {
 			
 		}while(opc==0);//Se sale del ciclo hasta que el usuario deja de presionar a la opción de Jugar
 			
+	}
+	
+	public void ingresarNombre() {
+		
+		boolean repetir = false;
+		
+		do {
+			Question.nombre = (String) JOptionPane.showInputDialog(null, "Ingresa tu nombre: ", "Nombre Jugador",
+					JOptionPane.PLAIN_MESSAGE, new ImageIcon("src/paqueteDeProyecto/imagenes/nombre.png"), null, null);
+
+			if(Question.nombre.equals("")) {
+				JOptionPane.showMessageDialog(null, "Por favor ingresa un nombre", "Alerta",
+						JOptionPane.WARNING_MESSAGE);
+				repetir = true;
+			}
+			else { repetir = false;
+			}
+		}while(repetir); //Se repite ciclo hasta que el usuario ingrese un valor para nombre
 	}
 	
 	public void menuOpciones() {
@@ -68,18 +85,12 @@ public class Interfaz {
 					switch (opc) {
 					case 0:
 						Question.desplegarPreguntasHistoria();
-						// Question.revisarRespuestasH();
-						//Question.desplegarResultado();
 						break;
 					case 1:
 						Question.desplegarPreguntasGeografia();
-						//Question.revisarRespuestasG();
-						//Question.desplegarResultado();
 						break;
 					case 2:
 						Question.desplegarPreguntasCine();
-						//Question.revisarRespuestasC();
-						//Question.desplegarResultado();
 						break;
 					}
 					
