@@ -29,24 +29,24 @@ public class Interfaz {
 
 		do { //Ciclo para repetir todo el programa
 			
-			opc = JOptionPane.showOptionDialog(null, "", "Bienvenido", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null,
-					new Object[] { "Jugar", "Salir" }, "Jugar");
+			opc = JOptionPane.showOptionDialog(null, "", "Bienvenido", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE,
+					new ImageIcon("src/paqueteDeProyecto/imagenes/Tema.png"), new Object[] { "Jugar", "Salir" }, "Jugar");
 
 			if(opc==0) {
 				//Llamada a método para inicializar areglos con las preguntas y respuestas del Quizz
 				Question.añadirPreguntasYRespuestas();
 				Question.nombre = (String) JOptionPane.showInputDialog(null, "Ingresa tu nombre: ", "Nombre Jugador",
-						JOptionPane.PLAIN_MESSAGE, new ImageIcon("src/principal/imagenes/nombre.png"), null, null);
+						JOptionPane.PLAIN_MESSAGE, new ImageIcon("src/paqueteDeProyecto/imagenes/nombre.png"), null, null);
 
 				menuOpciones();//Llamada a metodo para seleccionar el tema de las preguntas y ejecutar sus metodos
 				
-				JOptionPane.showMessageDialog(null, "Hasta luego " + Question.nombre + "!", "Mensaje de despedida", JOptionPane.PLAIN_MESSAGE,
-						new ImageIcon("src/actividad542/imagenes/despedida.png"));// Mensaje de despedida de un usuario
+				JOptionPane.showMessageDialog(null, "Hasta luego " + Question.nombre + "... \nGracias por jugar!", "Mensaje de despedida", JOptionPane.PLAIN_MESSAGE,
+						new ImageIcon("src/paqueteDeProyecto/imagenes/byebye.gif"));// Mensaje de despedida de un usuario
 			}
 			else if(opc==1) {
 				// Mensaje de despedida de fin del programa
 				JOptionPane.showMessageDialog(null, "Gracias por utilizar nuestro programa, \nel programa se cerrará, bye bye!", 
-						"Salida del programa", JOptionPane.PLAIN_MESSAGE, new ImageIcon("src/actividad542/imagenes/despedida.png"));
+						"Salida del programa", JOptionPane.PLAIN_MESSAGE, new ImageIcon("src/paqueteDeProyecto/imagenes/despedidaFinal2.gif"));
 			}
 			
 		}while(opc==0);//Se sale del ciclo hasta que el usuario deja de presionar a la opción de Jugar

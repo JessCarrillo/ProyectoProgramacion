@@ -594,7 +594,7 @@ public class Preguntas {
 			Random = (int) Math.floor(Math.random() * PreguntasG.length); //Random hasta 20 
 			if(i==0) {
 				PreguntaRealizada[cont] = Random;
-				capturarRespuestasG();				
+				capturarRespuestasG(); //Llamada a método para revisar respuestas de Preguntas de Geografía	
 				revisarRespuestasG(); //Llamada a método para revisar respuestas de Preguntas de Geografía
 			}
 			else {
@@ -697,7 +697,7 @@ public class Preguntas {
 	}
 
 	public void revisarRespuestasG() {
-		tituloDR = "Puntaje de Georgrafía";
+		tituloDR = "Puntaje de Geografía";
 		
 		// Secuencia condicional para verificar si la respuesta que selecciono el usuario al pulsar
 		// el boton es igual a la respuesta del arreglo de respuestas de Geografia
@@ -738,9 +738,22 @@ public class Preguntas {
 	}
 
 	public void desplegarResultado() {
-		JOptionPane.showMessageDialog(null,
-				nombre + " acertaste " + contAcertadas + " preguntas" + "\nTienes un total de " + puntos + " puntos",
-				tituloDR, JOptionPane.PLAIN_MESSAGE, new ImageIcon("src/principal/imagenes/resultado.png"));
+		
+		if(contAcertadas>7) {
+			JOptionPane.showMessageDialog(null,
+					"Felicidades " + nombre + ", acertaste " + contAcertadas + " preguntas" + "\nTienes un total de " + puntos + " puntos"
+							+ "\nSigue así!", tituloDR, JOptionPane.PLAIN_MESSAGE, new ImageIcon("src/paqueteDeProyecto/imagenes/felicidades.png"));
+		}
+		else if(contAcertadas>5) {
+			JOptionPane.showMessageDialog(null,
+					"Ahí la llevas " + nombre + ", acertaste " + contAcertadas + " preguntas" + "\nTienes un total de " + puntos + " puntos"
+							+ "\nTu puedes!", tituloDR, JOptionPane.PLAIN_MESSAGE, new ImageIcon("src/paqueteDeProyecto/imagenes/ahiVa.png"));
+		}
+		else {
+			JOptionPane.showMessageDialog(null,
+					nombre + ", solo acertaste " + contAcertadas + " preguntas" + "\nTienes un total de " + puntos + " puntos"
+							+ "\nSigue intentando!", tituloDR, JOptionPane.PLAIN_MESSAGE, new ImageIcon("src/paqueteDeProyecto/imagenes/niModo.png"));
+		}
+		
 	}
-
 }
