@@ -1,8 +1,6 @@
 /*Integrantes:
 Rubiera Villareal Vanessa Estefania
 Carrillo Arellano Jesus David
-Aquino Chavez Luis Daniel
-Ramirez Medina Aaron
 Grupo 332 */
 
 package paqueteDeProyecto;
@@ -10,7 +8,10 @@ package paqueteDeProyecto;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
-public class Interfaz {
+public class Interfaz { 
+	
+	//Clase que tiene como proposito ser la Interfaz del programa de Preguntas, aqui se inicia el programa y se llaman a los diferentes 
+	//metodos segun la secuencia que siga el usuario en el programa, sirve como la estructura del programa de forma amplia
 
 	Preguntas Question = new Preguntas();
 	int opc = 0;
@@ -24,10 +25,9 @@ public class Interfaz {
 		Interfaz.inicio();
 	}
 
-	public void inicio() {
-	
+	public void inicio() { //Metodo que inicia el programa de Preguntas, llama a las demás funciones y repite el programa en caso de que el usuario lo desee
+		
 		int opc = 0;
-
 		do { //Ciclo para repetir todo el programa
 			
 			opc = JOptionPane.showOptionDialog(null, "", "Bienvenido", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE,
@@ -52,10 +52,10 @@ public class Interfaz {
 			}
 			
 		}while(opc==0 || opc==1);//Se repite el ciclo si el usuario presiona Jugar o Ver puntajes
-			
 	}
 	
-	public void menuVerPuntajes() {
+	
+	public void menuVerPuntajes() { //Metodo para desplegar menu para seleccionar de cual tema se quieren ver el historial de puntajes y los metodos correspondientes a cada tema
 		
 		int opc = 0;
 		
@@ -67,18 +67,19 @@ public class Interfaz {
 		// seleccionado por el usuario
 		switch (opc) {
 		case 0:
-			Question.verPuntajesH();
+			Question.verPuntajesH(); //Llamada a metodo para ver puntajes de Historia
 			break;
 		case 1:
-			Question.verPuntajesG();
+			Question.verPuntajesG(); //Llamada a metodo para ver puntajes de Geografia
 			break;
 		case 2:
-			Question.verPuntajesC();
+			Question.verPuntajesC(); //Llamada a metodo para ver puntajes de Cine
 			break;
 		}
 	}
 	
-	public void ingresarNombre() {
+	
+	public void ingresarNombre() { //Metodo para que el usuario ingrese su nombre, y validar que no deje vacio la variable nombre
 		
 		boolean repetir = false;
 		
@@ -96,7 +97,8 @@ public class Interfaz {
 		}while(repetir); //Se repite ciclo hasta que el usuario ingrese un valor para nombre
 	}
 	
-	public void menuOpciones() {
+	
+	public void menuOpciones() { //Metodo para llamar a metodos de desplegar preguntas segun el tema seleccionado en el menu de opciones de temas
 		
 		// Ciclo para repetir la selección de temas
 				do {
@@ -112,19 +114,19 @@ public class Interfaz {
 					// seleccionado por el usuario
 					switch (opc) {
 					case 0:
-						Question.desplegarPreguntasHistoria();
+						Question.desplegarPreguntasHistoria(); //Llamada a metodo para desplegar preguntas de Historia
 						break;
 					case 1:
-						Question.desplegarPreguntasGeografia();
+						Question.desplegarPreguntasGeografia(); //Llamada a metodo para desplegar preguntas de Geografia
 						break;
 					case 2:
-						Question.desplegarPreguntasCine();
+						Question.desplegarPreguntasCine(); //Llamada a metodo para desplegar preguntas de Cine
 						break;
 					}
 					
-					Question.almacenarPuntajes();
-					Question.desplegarResultado();
-					preguntaVolverJugar();
+					Question.almacenarPuntajes(); //Llamada a metodo para almacenar los puntajes de cada usuario con respecto al tema jugado
+					Question.desplegarResultado(); //Llamada a metodo para desplegar resultados del jugador (usuario)
+					preguntaVolverJugar(); 
 					Question.reiniciarVariables(); // Reiniciar contador de preguntas correctas y acumulador de puntos para cada nuevo juego del usuario con respecto a la elección de tema
 
 				} while (res != 2); // El ciclo se repite hasta que el usuario no ingrese 2
@@ -133,7 +135,7 @@ public class Interfaz {
 
 	
 	public void preguntaVolverJugar() {
-		// Se muestra un mensaje para seleccionar si se desea continuar o si se quiere
+		// Metodo que muestra un mensaje para seleccionar si se desea continuar o si se quiere
 		// cerrar el programa, se verifica los datos ingresados, de no ser un 1 o 2 se
 		// seguira mostrando el cuadro de seleccion
 		

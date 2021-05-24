@@ -1,8 +1,6 @@
 /*Integrantes:
 Rubiera Villareal Vanessa Estefania
 Carrillo Arellano Jesus David
-Aquino Chavez Luis Daniel
-Ramirez Medina Aaron
 Grupo 332 */
 
 package paqueteDeProyecto;
@@ -11,6 +9,10 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 public class Preguntas {
+	
+	//Clase que tiene como proposito el realizar las diversas tareas relacionadas a las Preguntas, la incializacion de preguntas y respuestas
+	//la captura de la respuesta del usuario para las preguntas de cada tema, la revision de las respuestas de las preguntas ingresadas
+	//el despliegue de los resultados en base a la puntuacion calculada en la revision de las respuestas, etc.
 
 	// Declaración e Inicialización de Variables Globales
 	String PreguntasH[][] = new String[20][5];
@@ -25,7 +27,7 @@ public class Preguntas {
 	int ResCorrectasG[] = new int[20];
 	int ResCorrectasC[] = new int[20];
 	
-	String puntajesH[][] = new String[10][2];
+	String puntajesH[][] = new String[10][2]; //Arrelgos para guardar el usuario y su puntaje, maximo 10 veces por tema
 	String puntajesG[][] = new String[10][2];
 	String puntajesC[][] = new String[10][2];
 			
@@ -33,7 +35,7 @@ public class Preguntas {
 	int res = 0;
 	int contAcertadas = 0;
 	int puntos = 0;
-	int juegoH = -1, juegoG = -1, juegoC = -1;
+	int juegoH = -1, juegoG = -1, juegoC = -1; //Se inicializan en -1 para no causar error en los arreglos
 	int opc = 0;
 	String tituloDR = "";
 
@@ -41,7 +43,12 @@ public class Preguntas {
 	boolean encontrado;
 	int totalP = (PreguntasH.length/2); //Variable para el total de preguntas a desplegar
 
-	public void añadirPreguntasYRespuestas() {
+	
+	
+	public void añadirPreguntasYRespuestas() { 
+		
+		//Metodo para llamar a metodos para inicializar las preguntas de cada tema,
+		//se inicializan también los arreglos para respuestas correctas de cada tema
 
 		// Arreglos con preguntas para desplegarlas proximamente en ciclo for
 
@@ -113,10 +120,10 @@ public class Preguntas {
 		ResCorrectasC[17] = 3;
 		ResCorrectasC[18] = 0;
 		ResCorrectasC[19] = 1;
-
 	}
+	
 
-	public void añadirPreguntasyResHistoria() {
+	public void añadirPreguntasyResHistoria() { //Metodo para inicializar arreglo de preguntas de historia (preguntas y posibles respuestas de cada pregunta)
 
 		// Preguntas
 		PreguntasH[0][0] = "Selecciona el año en que inicio la guerra de independencia de Mexico";
@@ -259,10 +266,10 @@ public class Preguntas {
 		PreguntasH [19][2] = "Dolores, Guanajuato"; //Res Correcta
 		PreguntasH [19][3] = "Atotonilco";
 		PreguntasH [19][4] = "Queretaro";
-
 	}
 
-	public void añadirPreguntasyResGeografia() {
+	
+	public void añadirPreguntasyResGeografia() { //Metodo para inicializar arreglo de preguntas de geografia (preguntas y posibles respuestas de cada pregunta)
 
 		// Preguntas Geografia
 		PreguntasG[0][0] = "¿Cuál es el país más grande del mundo?";
@@ -407,7 +414,7 @@ public class Preguntas {
 		PreguntasG[19][4] = "Asia"; //Res Correcta
 	}
 	
-	public void añadirPreguntasyResCine() {
+	public void añadirPreguntasyResCine() { //Metodo para inicializar arreglo de preguntas de cine (preguntas y posibles respuestas de cada pregunta)
 
 		// Preguntas Cine
 		PreguntasC[0][0] = "¿Película que casi le da un infarto a su director Brad Bird?";
@@ -550,19 +557,19 @@ public class Preguntas {
 		PreguntasC[19][2] = "Mega Mente"; //Res Correcta
 		PreguntasC[19][3] = "Los increibles";
 		PreguntasC[19][4] = "Los Minions";
-
 	}
 
-	public void desplegarPreguntasHistoria() {
+	
+	public void desplegarPreguntasHistoria() {  //Metodo para que el usuario ingrese su respuesta a cada preguntas de historia de las 10 que se muestran de forma aleatoria
 		
 		juegoH++; //Se aumenta contador de juegoH para contar los juegos del tema Historia
 		int PreguntaRealizada[] = new int[totalP]; //Contiene el valor de totalP igual a 10, asignado al inicio de la clase
 		int cont = 0;
 		encontrado = false;
 		
-		for (int i = 0; i < totalP; i++) { //Ciclo para 
+		for (int i = 0; i < totalP; i++) { //Ciclo para mostrar preguntas de forma aleatoria hasta que se hayan mostrado 10 preguntas
 			
-			Random = (int) Math.floor(Math.random() * PreguntasH.length); //Random hasta 20 
+			Random = (int) Math.floor(Math.random() * PreguntasH.length); //Random hasta 20, posibilidad de elegir la pregunta en el rango de 1-20
 			if(i==0) {
 				PreguntaRealizada[cont] = Random;
 				capturarRespuestasH();				
@@ -589,7 +596,8 @@ public class Preguntas {
 		}
 	}
 
-	public void desplegarPreguntasGeografia() {
+	
+	public void desplegarPreguntasGeografia() { //Metodo para que el usuario ingrese su respuesta a cada preguntas de geografia de las 10 que se muestran de forma aleatoria
 		
 		juegoG++; //Se aumenta contador de juegoG para contar los juegos del tema Geografia
 		int PreguntaRealizada[] = new int[totalP]; //Contiene el valor de totalP igual a 10, asignado al inicio de la clase
@@ -625,7 +633,8 @@ public class Preguntas {
 		}
 	}
 	
-	public void desplegarPreguntasCine() {
+	
+	public void desplegarPreguntasCine() { //Metodo para que el usuario ingrese su respuesta a cada preguntas de cine de las 10 que se muestran de forma aleatoria
 		
 		juegoC++; //Se aumenta contador de juegoC para contar los juegos del tema Cine		
 		int PreguntaRealizada[] = new int[totalP]; //Contiene el valor de totalP igual a 10, asignado al inicio de la clase
@@ -661,7 +670,8 @@ public class Preguntas {
 		}
 	}
 
-	public void capturarRespuestasH() {
+	
+	public void capturarRespuestasH() { //Metodo para capturar la respuesta de las preguntas del tema de Historia
 		RespuestasH[Random] = JOptionPane.showOptionDialog(null, PreguntasH[Random][0], "Preguntas de Historia",
 				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
 				new ImageIcon("src/paqueteDeProyecto/imagenes/Historia" + Random +".png"),
@@ -669,7 +679,8 @@ public class Preguntas {
 				PreguntasH[Random][1]);
 	}
 	
-	public void capturarRespuestasG() {
+	
+	public void capturarRespuestasG() { //Metodo para capturar la respuesta de las preguntas del tema de Geografia
 		RespuestasG[Random] = JOptionPane.showOptionDialog(null, PreguntasG[Random][0], "Preguntas de Geografía",
 				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
 				new ImageIcon("src/paqueteDeProyecto/imagenes/Geografia" + Random +".png"),
@@ -677,7 +688,8 @@ public class Preguntas {
 				PreguntasG[Random][1]);
 	}
 	
-	public void capturarRespuestasC() {
+	
+	public void capturarRespuestasC() { //Metodo para capturar la respuesta de las preguntas del tema de Cine
 		RespuestasC[Random] = JOptionPane.showOptionDialog(null, PreguntasC[Random][0], "Preguntas de Cine",
 				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
 				new ImageIcon("src/paqueteDeProyecto/imagenes/Cine" + Random +".png"),
@@ -686,7 +698,7 @@ public class Preguntas {
 	}
 
 	
-	public void revisarRespuestasH() {
+	public void revisarRespuestasH() { //Metodo para revisar la respuesta de las preguntas del tema de Historia, acumular puntaje y mostrar si se respondio bien o mal cada pregunta
 		tituloDR = "Puntaje de Historia"; 
 		
 		// Secuencia condicional para verificar si la respuesta que selecciono el usuario al pulsar
@@ -704,7 +716,8 @@ public class Preguntas {
 		}
 	}
 
-	public void revisarRespuestasG() {
+	
+	public void revisarRespuestasG() {  //Metodo para revisar la respuesta de las preguntas del tema de Geografia, acumular puntaje y mostrar si se respondio bien o mal cada pregunta
 		tituloDR = "Puntaje de Geografía";
 		
 		// Secuencia condicional para verificar si la respuesta que selecciono el usuario al pulsar
@@ -721,8 +734,9 @@ public class Preguntas {
 					new ImageIcon("src/paqueteDeProyecto/imagenes/incorrecto.png"));// Mensaje de respuesta incorrecta
 		}
 	}
+	
 
-	public void revisarRespuestasC() {
+	public void revisarRespuestasC() {  //Metodo para revisar la respuesta de las preguntas del tema de Cine, acumular puntaje y mostrar si se respondio bien o mal cada pregunta
 		tituloDR = "Puntaje de Cine";
 
 		// Secuencia condicional para verificar si la respuesta que selecciono el usuario al pulsar
@@ -744,8 +758,9 @@ public class Preguntas {
 		contAcertadas = 0;
 		puntos = 0;
 	}
+	
 
-	public void desplegarResultado() {
+	public void desplegarResultado() { //Metodo para desplegar el resultado del usuario en cada juego, se despliega mensaje segun la puntuacion que obtuvo
 		
 		if(contAcertadas>7) {
 			JOptionPane.showMessageDialog(null,
@@ -762,45 +777,46 @@ public class Preguntas {
 					nombre + ", solo acertaste " + contAcertadas + " preguntas" + "\nTienes un total de " + puntos + " puntos"
 							+ "\nSigue intentando!", tituloDR, JOptionPane.PLAIN_MESSAGE, new ImageIcon("src/paqueteDeProyecto/imagenes/niModo.png"));
 		}
-		
 	}
 	
-	public void almacenarPuntajes() {
+	
+	public void almacenarPuntajes() { //Metodo para almacenar en arreglos los puntajes y los nombres de los usuarios en cada partida o juego, de acuerdo al tema elegido para jugar
 	
 		switch(opc) {
-		case 0:
-			if(juegoH<10) {
+		case 0: //Se guardan usuarios y puntajes para el tema de Historia
+			if(juegoH<10) {  //Maximo 10 usuarios
 				puntajesH[juegoH][0] = nombre;
 				puntajesH[juegoH][1] = Integer.toString(puntos);
 			}
-			else { //Mandar mensaje de limite de puntajes alcanzado
+			else { //Se reinicia valor para no causar error
 				juegoH = 9;
 			}
 			break;
-		case 1:
-			if(juegoG<10) {
+		case 1: //Se guardan usuarios y puntajes para el tema de Geografia 
+			if(juegoG<10) { //Maximo 10 usuarios
 				puntajesG[juegoG][0] = nombre;
 				puntajesG[juegoG][1] = Integer.toString(puntos);
 			}
 			else {
-				//Mandar mensaje de limite de puntajes alcanzado
+				//Se reinicia valor para no causar error
 				juegoG = 9;
 			}
 			break;
-		case 2:
-			if(juegoC<10) {
+		case 2: //Se guardan usuarios y puntajes para el tema de Cine 
+			if(juegoC<10) { //Maximo 10 usuarios
 				puntajesC[juegoC][0] = nombre;
 				puntajesC[juegoC][1] = Integer.toString(puntos);
 			}
 			else {
-				//Mandar mensaje de limite de puntajes alcanzado
+				//Se reinicia valor para no causar error
 				juegoC = 9;
 			}
 			break;
 		}
 	}
 	
-	public void verPuntajesH() {
+	
+	public void verPuntajesH() { //Metodo para ver los puntajes del tema de Historia segun la cantidad de juegos o partidas que haya del tema
 		
 		if(juegoH>0) { //Si hay más de una partida en el tema de historia
 			int pasadas;
@@ -851,7 +867,8 @@ public class Preguntas {
 		}		
 	}
 	
-	public void verPuntajesG() {
+	
+	public void verPuntajesG() {  //Metodo para ver los puntajes del tema de Geografia segun la cantidad de juegos o partidas que haya del tema
 
 		if(juegoG>0) { //Si hay más de una partida en el tema de geografia
 			int pasadas;
@@ -902,7 +919,8 @@ public class Preguntas {
 		}	
 	}
 	
-	public void verPuntajesC() {
+	
+	public void verPuntajesC() {  //Metodo para ver los puntajes del tema de Geografia segun la cantidad de juegos o partidas que haya del tema
 		
 		if(juegoC>0) { //Si hay más de una partida en el tema de geografia
 			int pasadas;
